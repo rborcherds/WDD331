@@ -1,0 +1,56 @@
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+h1,
+h2 {
+    font-family: $secondary-font;
+    color: $color-6;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 .4em;
+    font-size: 4rem;
+    background: $color-7;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include MQ(S) {
+        font-size: 3.2rem;
+    }
+    @include MQ(M) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1em 0;
+    @include MQ(S) {
+        font-size: 1.8rem;
+        margin: 1em 0 1.4em;
+    }
+}
+
+section>h2::before {
+    /* number before each section title */
+    color: darken($color-4, 15%);
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $color-6;
+    a {
+        color: $color-1;
+        text-decoration: underline;
+    }
+    @include MQ(S) {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
