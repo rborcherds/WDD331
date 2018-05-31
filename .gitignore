@@ -1,3 +1,7 @@
 Quiz
-style-guide-template.zip
+*.zip
 style-guide-template/
+node_modules/
+*.json
+week*
+
