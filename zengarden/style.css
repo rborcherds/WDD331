@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,700,900");
 html {
   margin: 0;
   padding: 0; }
 
 body {
   font-family: "Poppins", sans-serif;
+  font-weight: 200;
   font-size: 14px;
   line-height: 1.5em;
   color: #000;
@@ -24,15 +25,16 @@ p {
   text-align: left; }
 
 h1 {
+  font-weight: 900;
   font-size: 3.78em; }
 
 h2 {
-  font-weight: 300;
   font-size: 2.14em;
   margin-top: 10px;
   line-height: 1.2em; }
 
 h3 {
+  font-weight: 900;
   font-size: 1.21em;
   text-align: right;
   text-transform: uppercase;
@@ -119,7 +121,6 @@ nav a {
       margin-right: 20px; }
 
   .sidebar {
-    margin-left: 600px;
     position: absolute;
     top: 0;
     right: 0; }
@@ -128,30 +129,34 @@ nav a {
       padding: 10px;
       margin-top: 150px;
       width: 130px; }
-    .sidebar h3 .select {
-      background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-      margin: 10px 0 5px 0;
-      width: 97px;
-      height: 16px;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden; }
-    .sidebar h3 .archives {
-      background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-      margin: 25px 0 5px 0;
-      width: 57px;
-      height: 14px;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden; }
-    .sidebar h3 .resources {
-      background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-      margin: 25px 0 5px 0;
-      width: 63px;
-      height: 10px;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden; }
+    .sidebar h3 {
+      /*            .select {
+                      background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+                      margin: 10px 0 5px 0;
+                      width: 97px;
+                      height: 16px;
+                      text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }
+                  .archives {
+                      background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+                      margin: 25px 0 5px 0;
+                      width: 57px;
+                      height: 14px;
+                      text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }
+                  .resources {
+                      background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+                      margin: 25px 0 5px 0;
+                      width: 63px;
+                      height: 10px;
+                      text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }*/ }
     .sidebar ul {
       margin: 0;
       padding: 0; }
@@ -173,5 +178,111 @@ nav a {
     right: 0;
     width: 148px;
     height: 110px; } }
+@media only screen and (min-width: 1366px) {
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #000;
+    background: #276dcc;
+    margin: 0;
+    padding: 0; }
+
+  h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #330867; }
+
+  /*    #css-zen-garden {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0px 0px 0px 115px;
+      width: 681px;
+      }*/
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 115px;
+    width: 681px; }
+
+  .summary {
+    margin: 20px 20px 20px 10px;
+    width: 681px; }
+    .summary p {
+      font: italic 1.2em/2.2 "Poppins", sans-serif;
+      text-align: left; }
+
+  footer {
+    text-align: center; }
+    footer a:link,
+    footer a:visited {
+      margin-right: 20px; }
+
+  .sidebar {
+    flex-direction: column;
+    margin-left: 115px; }
+    .sidebar .wrapper {
+      font: 12pt "Poppins", sans-serif;
+      margin-top: 150px;
+      width: 340px; }
+    .sidebar h3 {
+      text-align: left;
+      /*            .select {
+                      background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+                      margin: 10px 0 5px 0;
+                      //width: 97px;
+                      height: 16px;
+                      //text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }
+                  .archives {
+                      background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+                      margin: 25px 0 5px 0;
+                      width: 57px;
+                      height: 14px;
+                      //text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }
+                  .resources {
+                      background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+                      margin: 25px 0 5px 0;
+                      width: 63px;
+                      height: 10px;
+                      text-indent: 100%;
+                      white-space: nowrap;
+                      overflow: hidden;
+                  }*/ }
+    .sidebar ul {
+      margin: 0;
+      padding: 0; }
+    .sidebar li {
+      line-height: 1.3em;
+      background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+      display: block;
+      padding-top: 5px;
+      margin-bottom: 5px;
+      list-style-type: none; }
+    .sidebar li a :link {
+      color: #276dcc; }
+    .sidebar li a :visited {
+      color: #276dcc; }
+
+  /*    .extra1 {
+          //background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
+          position: absolute;
+          top: 40px;
+          right: 0;
+          width: 148px;
+          height: 110px;
+      }*/ }
 
 /*# sourceMappingURL=style.css.map */

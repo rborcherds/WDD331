@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,700,900');
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
 // color palette - these colors will be the color swatches of the Colors section
@@ -33,6 +33,7 @@ html {
 
 body {
     font-family: $primary-font;
+    font-weight: 200;
     font-size: 14px;
     line-height: 1.5em;
     color: $color-6;
@@ -55,17 +56,18 @@ p {
 }
 
 h1 {
+    font-weight: 900;
     font-size: 3.78em;
 }
 
 h2 {
-    font-weight: 300;
     font-size: 2.14em;
     margin-top: 10px;
     line-height: 1.2em;
 }
 
 h3 {
+    font-weight: 900;
     font-size: 1.21em;
     text-align: right;
     text-transform: uppercase;
@@ -76,19 +78,19 @@ h3 {
 }
 
 a {
-     :link {
+    :link {
         font-weight: bold;
         text-decoration: none;
         color: $color-1;
     }
-     :visited {
+    :visited {
         font-weight: bold;
         text-decoration: none;
         color: $color-1;
     }
-     :hover,
-     :focus,
-     :active {
+    :hover,
+        :focus,
+        :active {
         text-decoration: underline;
         color: $color-1;
     }
@@ -168,12 +170,12 @@ nav {
     footer {
         text-align: center;
         a:link,
-        a:visited {
+            a:visited {
             margin-right: 20px;
         }
     }
     .sidebar {
-        margin-left: 600px;
+        //margin-left: 600px;
         position: absolute;
         top: 0;
         right: 0;
@@ -185,33 +187,33 @@ nav {
             width: 130px;
         }
         h3 {
-            .select {
-                background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-                margin: 10px 0 5px 0;
-                width: 97px;
-                height: 16px;
-                text-indent: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-            .archives {
-                background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-                margin: 25px 0 5px 0;
-                width: 57px;
-                height: 14px;
-                text-indent: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-            .resources {
-                background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-                margin: 25px 0 5px 0;
-                width: 63px;
-                height: 10px;
-                text-indent: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-            }
+            /*            .select {
+                            background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+                            margin: 10px 0 5px 0;
+                            width: 97px;
+                            height: 16px;
+                            text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .archives {
+                            background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+                            margin: 25px 0 5px 0;
+                            width: 57px;
+                            height: 14px;
+                            text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .resources {
+                            background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+                            margin: 25px 0 5px 0;
+                            width: 63px;
+                            height: 10px;
+                            text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }*/
         }
         ul {
             margin: 0;
@@ -227,10 +229,10 @@ nav {
         }
         li {
             a {
-                 :link {
+                :link {
                     color: $color-2;
                 }
-                 :visited {
+                :visited {
                     color: $color-2;
                 }
             }
@@ -244,4 +246,146 @@ nav {
         width: 148px;
         height: 110px;
     }
+}
+
+//--------------------------------------------------------
+//---------------     MEDIUM SCREEN     ------------------
+//--------------------------------------------------------
+
+@include MQ(M) {
+
+    body {
+        font-family: $primary-font;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $color-6;
+        background: $color-2;
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        font-weight: 900;
+        font-size: 1.5em;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        color: $color-3;
+    }
+    /*    #css-zen-garden {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 0px 0px 115px;
+        width: 681px;
+        }*/
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 115px;
+        width: 681px;
+    }
+    .summary {
+        //clear: both;
+        margin: 20px 20px 20px 10px;
+        width: 681px;
+        p {
+            font: italic 1.2em/2.2 $primary-font;
+            text-align: left;
+        }
+    }
+    .preamble {
+        //clear: right;
+        //padding: 0px 10px 0 10px;
+    }
+    .supporting {
+        //padding-left: 10px;
+        //margin-bottom: 40px;
+    }
+    footer {
+        text-align: center;
+        a:link,
+            a:visited {
+            margin-right: 20px;
+        }
+    }
+    .sidebar {
+        //display: fixed;
+        flex-direction: column;
+        margin-left: 115px;
+                //position: absolute;
+                //top: 0;
+                //right: 0;
+        //width: 340px;
+        .wrapper {
+            font: 12pt $primary-font;
+            //background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+            //padding: 10px;
+            margin-top: 150px;
+            width: 340px;
+        }
+        h3 {
+            text-align: left;
+
+            /*            .select {
+                            background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+                            margin: 10px 0 5px 0;
+                            //width: 97px;
+                            height: 16px;
+                            //text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .archives {
+                            background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+                            margin: 25px 0 5px 0;
+                            width: 57px;
+                            height: 14px;
+                            //text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        .resources {
+                            background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+                            margin: 25px 0 5px 0;
+                            width: 63px;
+                            height: 10px;
+                            text-indent: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }*/
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            line-height: 1.3em;
+            background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+            display: block;
+            padding-top: 5px;
+            margin-bottom: 5px;
+            list-style-type: none;
+        }
+        li {
+            a {
+                :link {
+                    color: $color-2;
+                }
+                :visited {
+                    color: $color-2;
+                }
+            }
+        }
+    }
+/*    .extra1 {
+        //background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 148px;
+        height: 110px;
+    }*/
 }
