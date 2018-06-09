@@ -263,29 +263,28 @@ nav {
         margin: 0;
         padding: 0;
     }
-    h3 {
-        font-weight: 900;
-        font-size: 1.5em;
-        text-align: right;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-        color: $color-3;
-    }
-    /*    #css-zen-garden {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0px 0px 0px 115px;
-        width: 681px;
-        }*/
     .page-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 115px;
-        width: 681px;
+        width: 50%;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        h3 {
+            font-weight: 900;
+            font-size: 1.5em;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            color: $color-3;
+        }
     }
     .summary {
         //clear: both;
@@ -315,9 +314,9 @@ nav {
         //display: fixed;
         flex-direction: column;
         margin-left: 115px;
-                //position: absolute;
-                //top: 0;
-                //right: 0;
+        //position: absolute;
+        //top: 0;
+        //right: 0;
         //width: 340px;
         .wrapper {
             font: 12pt $primary-font;
@@ -380,12 +379,12 @@ nav {
             }
         }
     }
-/*    .extra1 {
-        //background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-        position: absolute;
-        top: 40px;
-        right: 0;
-        width: 148px;
-        height: 110px;
-    }*/
+    /*    .extra1 {
+            //background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 148px;
+            height: 110px;
+        }*/
 }

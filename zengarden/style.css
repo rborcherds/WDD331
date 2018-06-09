@@ -188,29 +188,27 @@ nav a {
     margin: 0;
     padding: 0; }
 
-  h3 {
-    font-weight: 900;
-    font-size: 1.5em;
-    text-align: right;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #330867; }
-
-  /*    #css-zen-garden {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0px 0px 0px 115px;
-      width: 681px;
-      }*/
   .page-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 115px;
-    width: 681px; }
+    width: 50%; }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+    .intro h3 {
+      font-weight: 900;
+      font-size: 1.5em;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: #330867; }
 
   .summary {
     margin: 20px 20px 20px 10px;
