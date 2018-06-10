@@ -68,7 +68,6 @@ abbr {
 
 header {
   padding-top: 20px;
-  height: 110px;
   display: flex;
   flex-direction: column; }
   header h1 {
@@ -109,8 +108,10 @@ nav a {
     padding: 10px;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 650px 300px;
-    grid-template-areas: "header sidebar" "intro sidebar"; }
+    grid-template-columns: 450px 250px;
+    grid-template-areas: "header sidebar" "intro sidebar";
+    width: 700px;
+    margin: auto; }
     .page-wrapper .intro {
       grid-area: header; }
       .page-wrapper .intro h3 {
