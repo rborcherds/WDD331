@@ -8,7 +8,7 @@ $color-3: #330867;
 $color-4: #be50a9;
 $color-5: #ffffff;
 $color-6: #000;
-$color-7: linear-gradient(to bottom,
+$color-7: linear-gradient(to bottom right,
 #30CFD0 0%,
 $color-2 25%,
 #330867 75%);
@@ -40,6 +40,22 @@ body {
     background: $color-2;
     margin: 0;
     padding: 0;
+    @include MQ(S) {
+        font-family: $primary-font;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $color-6;
+        background: $color-7;
+        margin: auto;
+    }
+    @include MQ(M) {
+        font-family: $primary-font;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $color-6;
+        background: $color-2;
+        margin: auto;
+    }
 }
 
 h1,
@@ -107,6 +123,58 @@ abbr {
     background: $color-8;
     padding: 20px;
     margin: 0;
+    @include MQ(S) {
+        padding: 10px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 450px 250px;
+        grid-template-areas: "header sidebar" "intro sidebar";
+        width: 700px;
+        margin: auto;
+        .intro {
+            grid-area: header;
+            h3 {
+                font-weight: 900;
+                font-size: 1.5em;
+                text-align: right;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                color: $color-3;
+            }
+        }
+        .supporting {
+            grid-area: intro;
+        }
+    }
+    @include MQ(M) {
+        padding: 10px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 650px 300px;
+        grid-template-areas: "header sidebar" "intro sidebar";
+        width: 65%;
+        margin: auto;
+        background: $color-7;
+        .intro {
+            grid-area: header;
+            h3 {
+                font-weight: 900;
+                font-size: 1.5em;
+                text-align: right;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                color: $color-3;
+            }
+        }
+        .supporting {
+            grid-area: intro;
+            padding-right: 30px;
+        }
+    }
 }
 
 header {
@@ -148,39 +216,6 @@ nav {
 }
 
 @include MQ(S) {
-    body {
-        font-family: $primary-font;
-        font-size: 16px;
-        line-height: 1.5em;
-        color: $color-6;
-        background: $color-2;
-        margin: auto;
-    }
-    .page-wrapper {
-        padding: 10px;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 450px 250px;
-        grid-template-areas: "header sidebar" "intro sidebar";
-        width: 700px;
-        margin: auto;
-        .intro {
-            grid-area: header;
-            h3 {
-                font-weight: 900;
-                font-size: 1.5em;
-                text-align: right;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-top: 20px;
-                margin-bottom: 5px;
-                color: $color-3;
-            }
-        }
-        .supporting {
-            grid-area: intro;
-        }
-    }
     .summary {
         //clear: both;
         margin: 20px 20px 20px 10px;
@@ -206,7 +241,7 @@ nav {
         }
         li {
             line-height: 1.3em;
-            background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+            // background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
             display: block;
             padding-top: 5px;
             margin-bottom: 5px;
@@ -236,40 +271,6 @@ nav {
 //---------------     MEDIUM SCREEN     ------------------
 //--------------------------------------------------------
 @include MQ(M) {
-    body {
-        font-family: $primary-font;
-        font-size: 16px;
-        line-height: 1.5em;
-        color: $color-6;
-        background: $color-2;
-        margin: auto;
-    }
-    .page-wrapper {
-        padding: 10px;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 650px 300px;
-        grid-template-areas: "header sidebar" "intro sidebar";
-        width: 65%;
-        margin: auto;
-        .intro {
-            grid-area: header;
-            h3 {
-                font-weight: 900;
-                font-size: 1.5em;
-                text-align: right;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-top: 20px;
-                margin-bottom: 5px;
-                color: $color-3;
-            }
-        }
-        .supporting {
-            grid-area: intro;
-            padding-right: 30px;
-        }
-    }
     .summary {
         //clear: both;
         margin: 20px 20px 20px 10px;
@@ -296,7 +297,7 @@ nav {
         }
         li {
             line-height: 1.3em;
-            background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+            //background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
             display: block;
             padding-top: 5px;
             margin-bottom: 5px;

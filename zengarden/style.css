@@ -101,7 +101,7 @@ nav a {
     font-size: 16px;
     line-height: 1.5em;
     color: #000;
-    background: #276dcc;
+    background: linear-gradient(to bottom right, #30CFD0 0%, #276dcc 25%, #330867 75%);
     margin: auto; }
 
   .page-wrapper {
@@ -146,7 +146,6 @@ nav a {
       padding: 0; }
     .sidebar li {
       line-height: 1.3em;
-      background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
       display: block;
       padding-top: 5px;
       margin-bottom: 5px;
@@ -177,7 +176,8 @@ nav a {
     grid-template-columns: 650px 300px;
     grid-template-areas: "header sidebar" "intro sidebar";
     width: 65%;
-    margin: auto; }
+    margin: auto;
+    background: linear-gradient(to bottom right, #30CFD0 0%, #276dcc 25%, #330867 75%); }
     .page-wrapper .intro {
       grid-area: header; }
       .page-wrapper .intro h3 {
@@ -214,7 +214,6 @@ nav a {
       padding: 0; }
     .sidebar li {
       line-height: 1.3em;
-      background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
       display: block;
       padding-top: 5px;
       margin-bottom: 5px;
