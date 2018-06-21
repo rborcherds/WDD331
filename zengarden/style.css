@@ -9,17 +9,41 @@ body {
   font-size: 14px;
   line-height: 1.5em;
   color: #ffffff;
-  background: #000; }
+  background: #000;
+  margin: 0; }
   @media only screen and (min-width: 768px) {
     body {
       font-family: "Poppins", sans-serif;
       font-size: 16px;
-      line-height: 1.5em; } }
+      line-height: 1.5em;
+      display: grid;
+      grid-gap: 0px;
+      grid-template-columns: 1fr 950px 1fr;
+      grid-template-rows: 300px auto;
+      grid-template-areas: "topleftside data toprightside" "leftside center rightside";
+      grid-area: 1 / 1 / 1 / 1;
+      width: 100vw;
+      background-image: url("stars.jpg");
+      height: 300px;
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: repeat-x;
+      background-size: cover;
+      background-size: auto 300px; }
+      body::after {
+        grid-area: toprightside;
+        content: url("SVG/Asset24.svg");
+        width: 60px;
+        align-self: center;
+        justify-self: center; } }
   @media only screen and (min-width: 1366px) {
     body {
       font-family: "Poppins", sans-serif;
       font-size: 16px;
-      line-height: 1.5em; } }
+      line-height: 1.5em; }
+      body::after {
+        grid-area: toprightside;
+        content: url("SVG/Asset24.svg"); } }
 
 h1,
 h2,
@@ -70,25 +94,19 @@ abbr {
 
 /* specific divs */
 .page-wrapper {
-  background-image: url("stars.jpg");
-  height: 300px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 20px;
   margin: 0; }
   @media only screen and (min-width: 768px) {
     .page-wrapper {
       padding: 10px;
       display: grid;
+      grid-area: 2 / 2 / 3 / 2;
       grid-gap: 5px;
-      grid-template-columns: 1fr 450px 250px 1fr;
-      grid-template-areas: "leftside header sidebar rightside" "leftside intro sidebar rightside";
-      width: 100vw;
-      margin: auto; }
+      grid-template-columns: 650px 250px;
+      grid-template-areas: "header sidebar" "intro sidebar"; }
       .page-wrapper .intro {
-        grid-area: header; }
+        grid-area: header;
+        margin-top: -130px; }
         .page-wrapper .intro h3 {
           font-weight: 900;
           font-size: 1.5em;
@@ -102,17 +120,10 @@ abbr {
         grid-area: intro; } }
   @media only screen and (min-width: 1366px) {
     .page-wrapper {
-      padding: 10px;
-      display: grid;
-      grid-gap: 5px;
-      grid-template-columns: 1fr 650px 300px 1fr;
-      grid-template-rows: 300px auto auto;
-      grid-template-areas: "leftside topheader topsidebar rightside" "leftside header sidebar rightside" "leftside intro sidebar rightside";
-      width: 100vw;
-      margin: auto; }
+      padding: 10px; }
       .page-wrapper .intro {
         grid-area: header;
-        max-width: 986px; }
+        margin-top: -130px; }
         .page-wrapper .intro h3 {
           font-weight: 900;
           font-size: 1.5em;
@@ -157,14 +168,14 @@ nav a {
 
 @media only screen and (min-width: 768px) {
   .summary {
-    margin: 20px 20px 20px 10px;
-    width: auto; }
+    margin: 20px 20px 20px 10px; }
     .summary p {
       font: italic 1.2em/2.2 "Poppins", sans-serif;
       text-align: left; }
 
   .sidebar {
-    grid-area: sidebar; }
+    display: grid;
+    grid-area: 2 / 3 / 4 / 3; }
     .sidebar .wrapper {
       font: 12pt "Poppins", sans-serif;
       margin-top: 150px;
