@@ -1,306 +1,330 @@
-    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,700,900');
-    @import 'partials/prefix-mixins';
-    @import 'partials/layout';
-    // color palette - these colors will be the color swatches of the Colors section
-    $color-1: #30CFD0;
-    $color-2: #276dcc;
-    $color-3: #330867;
-    $color-4: #be50a9;
-    $color-5: #ffffff;
-    $color-6: #000;
-    $color-7: linear-gradient(to bottom right,
-    #30CFD0 0%,
-    $color-2 25%,
-    #330867 75%);
-    $color-8: #a1a1a1;
-    $color-10: #2b3a42;
-    $color-11: #3f5765;
-    $color-12: #bdd4de;
-    $color-13: #efefef;
-    $color-14: #ff530d;
-    // additional colors
-    $success: #6fce72; // green
-    $alert: #ce0000; // red
-    // fonts
-    $primary-font: 'Poppins',
-    sans-serif;
-    $secondary-font: 'Poppins',
-    sans-serif;
-    html {
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,700,900');
+@import 'partials/prefix-mixins';
+@import 'partials/layout';
+// color palette - these colors will be the color swatches of the Colors section
+$color-1: #30CFD0;
+$color-2: #276dcc;
+$color-3: #330867;
+$color-4: #be50a9;
+$color-5: #ffffff;
+$color-6: #000;
+$color-7: linear-gradient(to right,
+#30CFD0 0%,
+#276dcc 35%,
+#330867 70%);
+$color-8: #cecece;
+$color-10: #2b3a42;
+$color-11: #3f5765;
+$color-12: #bdd4de;
+$color-13: #efefef;
+$color-14: #ff530d;
+// additional colors
+$success: #6fce72; // green
+$alert: #ce0000; // red
+// fonts
+$primary-font: 'Poppins',
+sans-serif;
+$secondary-font: 'Poppins',
+sans-serif;
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: $primary-font;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: $color-5;
+    background: $color-6;
+    margin: 0;
+    @include MQ(S) {
         font-family: $primary-font;
-        font-weight: 200;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.5em;
-        color: $color-5;
-        background: $color-6;
-        margin: 0;
-        @include MQ(S) {
-            font-family: $primary-font;
-            font-size: 16px;
-            line-height: 1.5em;
-            display: grid;
-            grid-gap: 0px;
-            grid-template-columns: 1fr 950px 1fr;
-            grid-template-rows: 300px auto;
-            grid-template-areas: "topleftside data toprightside" "leftside center rightside";
-            grid-area: 1 / 1 / 1 / 1;
-            width: 100vw;
-            background-image: url("stars.jpg");
-            height: 300px;
-            background-attachment: fixed;
-            background-position: top;
-            background-repeat: repeat-x;
-            background-size: cover;
-            background-size: auto 300px;
-            &::after {
-                grid-area: toprightside;
-                content: url("SVG/Asset24.svg");
-                width: 60px;
-                align-self: center;
-                justify-self: center;
-            }
-        }
-        @include MQ(M) {
-            font-family: $primary-font;
-            font-size: 16px;
-            line-height: 1.5em;
-            &::after {
-                grid-area: toprightside;
-                content: url("SVG/Asset24.svg");
-            }
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 1fr 1100px 1fr;
+        grid-template-rows: 350px auto;
+        grid-template-areas: "topleftside data toprightside" "leftside center rightside";
+        grid-area: 1 / 1 / 3 / 3;
+        width: 100vw;
+        background-image: url("stars.jpg");
+        // height: 300px;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-size: auto 350px;
+        &::after {
+            grid-area: toprightside;
+            content: url("SVG/Asset24.svg");
+            width: 180px;
+            align-self: center;
+            margin-left: -150px;
         }
     }
-    
-    h1,
-    h2,
-    h3,
-    h4 {
+    @include MQ(M) {
         font-family: $primary-font;
-        color: $color-5;
+        font-size: 16px;
+        line-height: 1.5em;
+        &::after {
+            grid-area: toprightside;
+            content: url("SVG/Asset24.svg");
+        }
     }
-    
-    p {
-        margin-top: 0;
-        text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $primary-font;
+    color: $color-5;
+}
+
+p {
+    margin-top: 0;
+    text-align: left;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3.78em;
+}
+
+h2 {
+    font-size: 2.14em;
+    margin-top: 10px;
+    line-height: 1.2em;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1.21em;
+    text-align: right;
+    text-transform: uppercase;
+    background: $color-7;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: $color-3;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+a {
+     :link {
+        font-weight: bold;
+        text-decoration: none;
+        color: $color-1;
     }
-    
+     :visited {
+        font-weight: bold;
+        text-decoration: none;
+        color: $color-1;
+    }
+     :hover,
+     :focus,
+     :active {
+        text-decoration: underline;
+        color: $color-1;
+    }
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: dotted underline;
+}
+
+
+/* specific divs */
+
+.page-wrapper {
+    padding: 20px;
+    margin: 0;
+    @include MQ(S) {
+        padding: 10px;
+        display: grid;
+        grid-gap: 5px;
+        grid-area: 2 / 1 / 4 / 4;
+        grid-template-columns: 1fr 810px 300px 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: "leftside header sidebar rightside" "leftside preamble sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside";
+        width: 100vw;
+        background: $color-6;
+        .intro {
+            grid-area: 2 / 2;
+            margin-top: -130px;
+            h3 {
+                font-weight: 900;
+                font-size: 1.5em;
+                text-align: right;
+                text-transform: uppercase;
+                background: $color-7;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                color: $color-7;
+            }
+        }
+        .supporting {
+            grid-area: intro;
+        }
+        .participation,
+        .benefits,
+        .requirements {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+    }
+    @include MQ(M) {
+        padding: 10px;
+        // margin: auto;
+        // background: $color-7;
+        .intro {
+            margin-top: -130px;
+            h3 {
+                font-weight: 900;
+                font-size: 1.5em;
+                text-align: right;
+                text-transform: uppercase;
+                background: $color-7;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                color: $color-3;
+            }
+        }
+        .supporting {
+            grid-area: intro;
+            padding-right: 30px;
+        }
+    }
+}
+
+header {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
     h1 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 1em;
+        background: $color-7;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-weight: 900;
         font-size: 3.78em;
     }
-    
     h2 {
         font-size: 2.14em;
         margin-top: 10px;
         line-height: 1.2em;
+        font-weight: 300;
     }
-    
-    h3 {
-        font-weight: 900;
-        font-size: 1.21em;
-        text-align: right;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-        color: $color-3;
+}
+
+nav {
+    ul {
+        margin-left: 0;
+        padding-left: 0;
     }
-    
+    li {
+        list-style-type: none;
+        margin-top: 10px;
+    }
     a {
-         :link {
-            font-weight: bold;
-            text-decoration: none;
-            color: $color-1;
-        }
-         :visited {
-            font-weight: bold;
-            text-decoration: none;
-            color: $color-1;
-        }
-         :hover,
-         :focus,
-         :active {
-            text-decoration: underline;
-            color: $color-1;
+        text-decoration: none;
+        color: $color-8;
+    }
+}
+
+.design-selection li a:first-of-type {
+    font-weight: 900;
+    /*color: #330867;*/
+    color: #ffffff;
+    font-size: 1.21em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+.preamble {
+    @include MQ(S) {
+        display: flex;
+        flex-direction: column;
+        grid-area: preamble;
+    }
+}
+
+.explanation {
+    @include MQ(S) {
+        display: flex;
+        flex-direction: column;
+        grid-area: 3 / 2;
+    }
+}
+
+@include MQ(S) {
+    .summary {
+        margin: 20px 20px 20px 10px;
+        p {
+            font: italic 1.2em/2.2 $primary-font;
+            text-align: left;
         }
     }
-    
-    abbr {
-        border-bottom: none;
-    }
-    /* specific divs */
-    
-    .page-wrapper {
-        padding: 20px;
-        margin: 0;
-        @include MQ(S) {
-            padding: 10px;
-            display: grid;
-            grid-area: 2 / 2 / 3 / 2;
-            grid-gap: 5px;
-            grid-template-columns: 650px 250px;
-            grid-template-areas: "header sidebar" "intro sidebar";
-            // width: 100vw;
-            // margin: auto;
-            .intro {
-                grid-area: header;
-                margin-top: -130px;
-                h3 {
-                    font-weight: 900;
-                    font-size: 1.5em;
-                    text-align: right;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-top: 20px;
-                    margin-bottom: 5px;
-                    color: $color-3;
+    .sidebar {
+        grid-area: sidebar;
+        display: grid;
+        grid-area: 2 / 3 / 4 / 3;
+        .wrapper {
+            font: 12pt $primary-font;
+            margin-top: 150px;
+            width: auto;
+        }
+        h3 {
+            text-align: left;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            line-height: 1.3em;
+            // background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+            display: block;
+            padding-top: 5px;
+            margin-bottom: 5px;
+            list-style-type: none;
+        }
+        li {
+            a {
+                 :link {
+                    color: $color-2;
                 }
-            }
-            .supporting {
-                grid-area: intro;
+                 :visited {
+                    color: $color-2;
+                }
             }
         }
         @include MQ(M) {
-            padding: 10px;
-            // display: grid;
-            // grid-gap: 5px;
-            // grid-template-columns: 1fr 650px 300px 1fr;
-            // grid-template-rows: 300px auto auto;
-            // grid-template-areas: "topleftside topheader topsidebar toprightside" "leftside header sidebar rightside" "leftside intro sidebar rightside";
-            // width: 100vw;
-            // margin: auto;
-            // background: $color-7;
-            .intro {
-                grid-area: header;
-                margin-top: -130px;
-                h3 {
-                    font-weight: 900;
-                    font-size: 1.5em;
-                    text-align: right;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-top: 20px;
-                    margin-bottom: 5px;
-                    color: $color-3;
-                }
-            }
-            .supporting {
-                grid-area: intro;
-                padding-right: 30px;
-            }
-        }
-    }
-    
-    header {
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        h1 {
-            margin-top: 10px;
-            margin-bottom: 0;
-            line-height: 1em;
-        }
-    }
-    
-    nav {
-        ul {
-            margin-left: 0;
-            padding-left: 0;
-        }
-        li {
-            list-style-type: none;
-            margin-top: 10px;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
-    
-    .design-selection li a:first-of-type {
-        font-weight: 900;
-        /*color: #330867;*/
-        color: #ffffff;
-        font-size: 1.21em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        &::after {
-            content: "\a";
-            white-space: pre;
-        }
-    }
-    
-    @include MQ(S) {
-        .summary {
-            //clear: both;
-            margin: 20px 20px 20px 10px;
-            p {
-                font: italic 1.2em/2.2 $primary-font;
-                text-align: left;
-            }
-        }
-        .sidebar {
-            // grid-area: sidebar; 
-            display: grid;
-            grid-area: 2 / 3 / 4 / 3;
-            .wrapper {
-                font: 12pt $primary-font;
-                margin-top: 150px;
-                width: auto;
-            }
-            h3 {
-                text-align: left;
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-            }
-            li {
-                line-height: 1.3em;
-                // background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-                display: block;
-                padding-top: 5px;
-                margin-bottom: 5px;
-                list-style-type: none;
-            }
-            li {
-                a {
-                     :link {
-                        color: $color-2;
-                    }
-                     :visited {
-                        color: $color-2;
-                    }
-                }
-            }
-        }
-        footer {
-            text-align: center;
-            a:link,
-            a:visited {
-                margin-right: 20px;
-            }
-        }
-    }
-    
-    //--------------------------------------------------------
-    //---------------     MEDIUM SCREEN     ------------------
-    //--------------------------------------------------------
-    @include MQ(M) {
-        .summary {
-            //clear: both;
-            margin: 20px 20px 20px 10px;
-            width: auto;
-            p {
-                font: italic 1.2em/2.2 $primary-font;
-                text-align: left;
-            }
-        }
-        .sidebar {
             grid-area: sidebar;
             padding-left: 30px;
             .wrapper {
@@ -317,7 +341,6 @@
             }
             li {
                 line-height: 1.3em;
-                //background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
                 display: block;
                 padding-top: 5px;
                 margin-bottom: 5px;
@@ -342,3 +365,4 @@
             }
         }
     }
+}
