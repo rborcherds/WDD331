@@ -19,10 +19,8 @@ body {
       line-height: 1.5em;
       display: grid;
       grid-gap: 0px;
-      grid-template-columns: 1fr 1100px 1fr;
-      grid-template-rows: 350px auto;
-      grid-template-areas: "topleftside data toprightside" "leftside center rightside";
-      grid-area: 1 / 1 / 3 / 3;
+      grid-template-columns: 1fr calc(80%) 1fr;
+      grid-template-rows: 350px auto auto auto auto;
       width: 100vw;
       background-image: url("stars.jpg");
       background-attachment: fixed;
@@ -31,19 +29,11 @@ body {
       background-size: cover;
       background-size: auto 350px; }
       body::after {
-        grid-area: toprightside;
+        grid-area: 1 / 3 / 1 / 3;
         content: url("SVG/Asset24.svg");
         width: 180px;
         align-self: center;
         margin-left: -150px; } }
-  @media only screen and (min-width: 1366px) {
-    body {
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      line-height: 1.5em; }
-      body::after {
-        grid-area: toprightside;
-        content: url("SVG/Asset24.svg"); } }
 
 h1,
 h2,
@@ -81,17 +71,15 @@ h3 {
   width: fit-content;
   align-self: flex-end; }
 
-a :link {
+a:link {
   font-weight: bold;
   text-decoration: none;
   color: #30CFD0; }
-a :visited {
+a:visited {
   font-weight: bold;
   text-decoration: none;
   color: #30CFD0; }
-a :hover,
-a :focus,
-a :active {
+a:hover, a:focus, a:active {
   text-decoration: underline;
   color: #30CFD0; }
 
@@ -107,64 +95,61 @@ abbr[title] {
     .page-wrapper {
       padding: 10px;
       display: grid;
-      grid-gap: 5px;
-      grid-area: 2 / 1 / 4 / 4;
-      grid-template-columns: 1fr 810px 300px 1fr;
-      grid-template-rows: auto auto auto auto auto auto auto auto;
-      grid-template-areas: "leftside header sidebar rightside" "leftside preamble sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside" "leftside intro sidebar rightside";
+      grid-gap: 25px;
+      grid-area: 2 / 1 / 3 / 3;
+      grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
+      grid-template-rows: auto auto auto auto auto auto;
       width: 100vw;
       background: #000; }
-      .page-wrapper .intro {
-        grid-area: 2 / 2;
-        margin-top: -130px; }
-        .page-wrapper .intro h3 {
-          font-weight: 900;
-          font-size: 1.5em;
-          text-align: right;
-          text-transform: uppercase;
-          background: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          letter-spacing: 1px;
-          margin-top: 20px;
-          margin-bottom: 5px;
-          color: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%); }
-      .page-wrapper .supporting {
-        grid-area: intro; }
-      .page-wrapper .participation,
-      .page-wrapper .benefits,
-      .page-wrapper .requirements {
+      .page-wrapper::after {
+        grid-area: 3 / 1 / 3 / 3;
         display: flex;
-        align-items: flex-end;
+        background-image: url("crab_nebula-crop.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 100vw;
+        min-height: 300px;
+        content: url("crab_nebula_crop.jpg"); }
+      .page-wrapper > .intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-area: 1 / 2 / 1 / 2;
+        display: grid;
+        min-height: 700px; }
+      .page-wrapper > .main > .explanation {
+        grid-area: 2 / 2 / 2 / 2;
+        display: flex;
+        flex-direction: column; }
+      .page-wrapper > .main:nth-child(n+2) {
+        grid-area: 4 / 2 / 4 / 2;
+        display: flex;
         flex-direction: column; } }
-  @media only screen and (min-width: 1366px) {
-    .page-wrapper {
-      padding: 10px; }
-      .page-wrapper .intro {
-        margin-top: -130px; }
-        .page-wrapper .intro h3 {
-          font-weight: 900;
-          font-size: 1.5em;
-          text-align: right;
-          text-transform: uppercase;
-          background: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          letter-spacing: 1px;
-          margin-top: 20px;
-          margin-bottom: 5px;
-          color: #330867; }
-      .page-wrapper .supporting {
-        grid-area: intro;
-        padding-right: 30px; } }
 
-header {
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column; }
+  .summary h3,
+  .preamble h3,
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
+    align-items: flex-end; }
+
+.intro header {
   padding-top: 20px;
   display: flex;
   flex-direction: column; }
-  header h1 {
+  .intro header h1 {
     margin-top: 10px;
     margin-bottom: 0;
     line-height: 1em;
@@ -174,11 +159,47 @@ header {
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     font-size: 3.78em; }
-  header h2 {
+  .intro header h2 {
     font-size: 2.14em;
     margin-top: 10px;
     line-height: 1.2em;
     font-weight: 300; }
+  @media only screen and (min-width: 768px) {
+    .intro header {
+      grid-area: 1 / 2 / 2 / 2;
+      margin-top: -85px; }
+      .intro header h3 {
+        font-weight: 900;
+        font-size: 1.5em;
+        text-align: right;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        color: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%); } }
+@media only screen and (min-width: 768px) {
+  .intro .summary {
+    grid-area: 2 / 2 / 2 / 2;
+    margin: 20px 20px 20px 10px; }
+    .intro .summary p {
+      font: italic 1.2em/2.2 "Poppins", sans-serif;
+      text-align: left; }
+  .intro .preamble {
+    grid-area: 3 / 2 / 3 / 2; } }
+
+@media only screen and (min-width: 768px) {
+  .supporting .participation {
+    grid-area: 3 / 2 / 3 / 2; }
+  .supporting .benefits {
+    grid-area: 4 / 2 / 4 / 2; }
+  .supporting .requirements {
+    grid-area: 5 / 2 / 5 / 2; }
+  .supporting footer {
+    grid-area: 6 / 2 / 6 / 2; } }
 
 nav ul {
   margin-left: 0;
@@ -202,32 +223,26 @@ nav a {
     white-space: pre; }
 
 @media only screen and (min-width: 768px) {
-  .preamble {
-    display: flex;
-    flex-direction: column;
-    grid-area: preamble; } }
-
-@media only screen and (min-width: 768px) {
-  .explanation {
-    display: flex;
-    flex-direction: column;
-    grid-area: 3 / 2; } }
-
-@media only screen and (min-width: 768px) {
-  .summary {
-    margin: 20px 20px 20px 10px; }
-    .summary p {
-      font: italic 1.2em/2.2 "Poppins", sans-serif;
-      text-align: left; }
-
   .sidebar {
-    grid-area: sidebar;
-    display: grid;
-    grid-area: 2 / 3 / 4 / 3; }
-    .sidebar .wrapper {
-      font: 12pt "Poppins", sans-serif;
-      margin-top: 150px;
-      width: auto; }
+    display: flex;
+    grid-area: 1 / 3 / 6 / 3;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    font: 12pt "Poppins", sans-serif;
+    margin-top: 150px; }
+    .sidebar > .wrapper {
+      grid-area: 1 / 1 / 5 / 1; }
+    .sidebar > .wrapper > .design-selection {
+      grid-area: 1 / 1 / 1 / 1;
+      min-height: 900px; }
+    .sidebar > .wrapper > .design-archives {
+      grid-area: 3 / 1 / 3 / 1; }
+    .sidebar > .wrapper > footer {
+      grid-area: 4 / 1 / 4 / 1;
+      text-align: center; }
+      .sidebar > .wrapper > footer a:link,
+      .sidebar > .wrapper > footer a:visited {
+        margin-right: 20px; }
     .sidebar h3 {
       text-align: left; }
     .sidebar ul {
@@ -239,38 +254,9 @@ nav a {
       padding-top: 5px;
       margin-bottom: 5px;
       list-style-type: none; }
-    .sidebar li a :link {
+    .sidebar li a:link {
       color: #276dcc; }
-    .sidebar li a :visited {
+    .sidebar li a:visited {
       color: #276dcc; } }
-  @media only screen and (min-width: 768px) and (min-width: 1366px) {
-    .sidebar {
-      grid-area: sidebar;
-      padding-left: 30px; }
-      .sidebar .wrapper {
-        font: 12pt "Poppins", sans-serif;
-        margin-top: 150px;
-        width: auto; }
-      .sidebar h3 {
-        text-align: left; }
-      .sidebar ul {
-        margin: 0;
-        padding: 0; }
-      .sidebar li {
-        line-height: 1.3em;
-        display: block;
-        padding-top: 5px;
-        margin-bottom: 5px;
-        list-style-type: none; }
-      .sidebar li a :link {
-        color: #276dcc; }
-      .sidebar li a :visited {
-        color: #276dcc; } }
-@media only screen and (min-width: 768px) {
-    .sidebar footer {
-      text-align: center; }
-      .sidebar footer a:link,
-      .sidebar footer a:visited {
-        margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

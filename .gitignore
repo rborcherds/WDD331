@@ -1,6 +1,7 @@
 .vscode
 Quiz
 *.zip
+*.xcf
 style-guide-template/
 node_modules/
 *.json
