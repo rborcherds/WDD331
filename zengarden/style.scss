@@ -26,8 +26,6 @@ $primary-font: 'Poppins',
 sans-serif;
 $secondary-font: 'Poppins',
 sans-serif;
-$n: 500;
-$value: 500;
 html {
     margin: 0;
     padding: 0;
@@ -52,11 +50,9 @@ body {
         grid-template-rows: 350px auto auto auto auto;
         width: 100vw;
         background-image: url("stars.jpg");
-        // height: 300px;
         background-attachment: fixed;
         background-position: top;
         background-repeat: repeat-x;
-        background-size: cover;
         background-size: auto 350px;
         &::after {
             grid-area: 1 / 3 / 1 / 3;
@@ -95,7 +91,6 @@ h2 {
 h3 {
     font-weight: 900;
     font-size: 1.21em;
-    text-align: right;
     text-transform: uppercase;
     background: $color-7;
     background-clip: text;
@@ -105,8 +100,17 @@ h3 {
     margin-top: 20px;
     margin-bottom: 5px;
     color: $color-3;
-    width: fit-content;
-    align-self: flex-end;
+    width: intrinsic;
+    /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;
+    /* Firefox/Gecko */
+    width: -webkit-max-content;
+    /* Chrome */
+    align-self: flex-start;
+    @include MQ(S) {
+        text-align: right;
+        align-self: flex-end;
+    }
 }
 
 a {
@@ -159,7 +163,7 @@ abbr[title] {
             background-position: top center;
             width: 100vw;
             min-height: 300px;
-            content: url("crab_nebula_crop.jpg");
+            content: " ";
         }
         &>.intro {
             grid-template-columns: 1fr;
@@ -197,7 +201,6 @@ abbr[title] {
 
 .intro {
     header {
-        padding-top: 20px;
         display: flex;
         flex-direction: column;
         h1 {
@@ -219,7 +222,7 @@ abbr[title] {
         }
         @include MQ(S) {
             grid-area: 1 / 2 / 2 / 2;
-            margin-top: -85px;
+            margin-top: -75px;
             h3 {
                 font-weight: 900;
                 font-size: 1.5em;
@@ -239,7 +242,6 @@ abbr[title] {
     @include MQ(S) {
         .summary {
             grid-area: 2 / 2 / 2 / 2;
-            margin: 20px 20px 20px 10px;
             p {
                 font: italic 1.2em/2.2 $primary-font;
                 text-align: left;
@@ -296,8 +298,35 @@ nav {
     }
 }
 
-@include MQ(S) {
-    .sidebar {
+.sidebar {
+    display: flex;
+    font: 12pt $primary-font;
+    margin-top: 150px;
+    h3 {
+        text-align: left;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        line-height: 1.3em;
+        display: block;
+        padding-top: 5px;
+        margin-bottom: 5px;
+        list-style-type: none;
+    }
+    li {
+        a {
+            &:link {
+                color: $color-2;
+            }
+            &:visited {
+                color: $color-2;
+            }
+        }
+    }
+    @include MQ(S) {
         display: flex;
         grid-area: 1 / 3 / 6 / 3;
         grid-template-rows: auto auto auto auto auto;
@@ -322,35 +351,12 @@ nav {
                 margin-right: 20px;
             }
         }
-        h3 {
-            text-align: left;
-        }
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            line-height: 1.3em;
-            // background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-            display: block;
-            padding-top: 5px;
-            margin-bottom: 5px;
-            list-style-type: none;
-        }
-        li {
-            a {
-                &:link {
-                    color: $color-2;
-                }
-                &:visited {
-                    color: $color-2;
-                }
-            }
-        }
     }
 }
 
+
 /* STARS */
+
 
 /*#css-zen-garden::after {
   content: "#stars";
