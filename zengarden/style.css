@@ -258,5 +258,87 @@ nav a {
       color: #276dcc; }
     .sidebar li a:visited {
       color: #276dcc; } }
+/* STARS */
+/*#css-zen-garden::after {
+  content: "#stars";
+}
+.page-wrapper::before {
+    content: "#stars2";
+}
+.page-wrapper::after {
+    content: "#stars3";
+}
+@import "compass/css3"
+
+// n is number of stars required
+@function multiple-box-shadow ($n) 
+  $value: '1999px 1857px #FFF'
+  @for $i from 2 through $n
+    $value: '500 , 1352px 789px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+html
+  height: 100%
+  overflow: hidden
+    
+#stars
+  width: 1px
+  height: 1px
+  background: transparent
+  box-shadow: $shadows-small
+  animation			: animStar 150s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+    
+#stars2
+  width: 2px
+  height: 2px
+  background: transparent
+  box-shadow: $shadows-medium
+  animation			: animStar 100s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+    
+#stars3
+  width: 3px
+  height: 3px
+  background: transparent
+  box-shadow: $shadows-big
+  animation			: animStar 50s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+    
+@keyframes animStar
+  from	
+    transform: translateY(0px)
+  to		
+    transform: translateY(-2000px)
+    */
 
 /*# sourceMappingURL=style.css.map */
