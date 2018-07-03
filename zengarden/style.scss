@@ -216,6 +216,12 @@ abbr[title] {
         @include MQ(S) {
             grid-area: 1 / 2 / 2 / 2;
             margin-top: -75px;
+            &::before {
+                @include introbefore;
+            }
+            &::after {
+                @include introafter;
+            }
             h3 {
                 font-weight: 900;
                 font-size: 1.5em;
@@ -254,18 +260,51 @@ abbr[title] {
             display: flex;
             flex-direction: column;
         }
-        &>:nth-child(n+2) {
+        &>:nth-child(2) {
             grid-area: 4 / 2 / 4 / 2;
             display: flex;
             flex-direction: column;
         }
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &:nth-child(n+1) {
+                visibility: hidden;
+            }
+            .zen-validate-html:after {
+                visibility: visible;
+                content: url("SVG/HTML.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-validate-css:after {
+                visibility: visible;
+                content: url("SVG/CSS.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-license:after {
+                visibility: visible;
+                content: url("SVG/CC.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-accessibility:after {
+                visibility: visible;
+                content: url("SVG/ALLY.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-github:after {
+                visibility: visible;
+                content: url("SVG/GH.svg");
+                display: block;
+                width: 60px;
+            }
+        }
         .participation {
-            &::before {
-                @include participationbefore;
-            }
-            &::after {
-                @include participationafter;
-            }
+            // test
         }
         .benefits {
             &::before {
@@ -282,9 +321,6 @@ abbr[title] {
             &::after {
                 @include requirementsafter;
             }
-        }
-        footer {
-            // grid-area: 6 / 2 / 6 / 2;
         }
     }
 }
@@ -348,6 +384,8 @@ abbr[title] {
         &>.wrapper>footer {
             grid-area: 4 / 1 / 4 / 1;
             text-align: center;
+            display: flex;
+            flex-direction: row;
             a:link,
             a:visited {
                 margin-right: 20px;
