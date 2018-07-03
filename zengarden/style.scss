@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,700,900');
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
+@import 'partials/stars';
 // color palette - these colors will be the color swatches of the Colors section
 $color-1: #30CFD0;
 $color-2: #276dcc;
@@ -26,6 +27,8 @@ $primary-font: 'Poppins',
 sans-serif;
 $secondary-font: 'Poppins',
 sans-serif;
+//$n: 500;
+//$value: 500;
 html {
     margin: 0;
     padding: 0;
@@ -141,10 +144,10 @@ abbr[title] {
 /* specific divs */
 
 .page-wrapper {
-    padding: 20px;
+    //padding: 20px;
     margin: 0;
     @include MQ(S) {
-        padding: 10px;
+        //padding: 10px;
         display: grid;
         grid-gap: 25px;
         grid-area: 2 / 1 / 3 / 3;
@@ -171,16 +174,6 @@ abbr[title] {
             grid-area: 1 / 2 / 1 / 2;
             display: grid;
             min-height: 700px;
-        }
-        &>.main>.explanation {
-            grid-area: 2 / 2 / 2 / 2;
-            display: flex;
-            flex-direction: column;
-        }
-        &>.main:nth-child(n+2) {
-            grid-area: 4 / 2 / 4 / 2;
-            display: flex;
-            flex-direction: column;
         }
     }
 }
@@ -223,6 +216,12 @@ abbr[title] {
         @include MQ(S) {
             grid-area: 1 / 2 / 2 / 2;
             margin-top: -75px;
+            &::before {
+                @include introbefore;
+            }
+            &::after {
+                @include introafter;
+            }
             h3 {
                 font-weight: 900;
                 font-size: 1.5em;
@@ -255,33 +254,74 @@ abbr[title] {
 
 .supporting {
     @include MQ(S) {
-        .participation {
-            grid-area: 3 / 2 / 3 / 2;
+        grid-area: 4 / 2 / 6 / 2;
+        .explanation {
+            grid-area: 3 / 2 / 4 / 2;
+            display: flex;
+            flex-direction: column;
         }
-        .benefits {
+        &>:nth-child(2) {
             grid-area: 4 / 2 / 4 / 2;
-        }
-        .requirements {
-            grid-area: 5 / 2 / 5 / 2;
+            display: flex;
+            flex-direction: column;
         }
         footer {
-            grid-area: 6 / 2 / 6 / 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &:nth-child(n+1) {
+                visibility: hidden;
+            }
+            .zen-validate-html:after {
+                visibility: visible;
+                content: url("SVG/HTML.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-validate-css:after {
+                visibility: visible;
+                content: url("SVG/CSS.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-license:after {
+                visibility: visible;
+                content: url("SVG/CC.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-accessibility:after {
+                visibility: visible;
+                content: url("SVG/ALLY.svg");
+                display: block;
+                width: 60px;
+            }
+            .zen-github:after {
+                visibility: visible;
+                content: url("SVG/GH.svg");
+                display: block;
+                width: 60px;
+            }
         }
-    }
-}
-
-nav {
-    ul {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    li {
-        list-style-type: none;
-        margin-top: 10px;
-    }
-    a {
-        text-decoration: none;
-        color: $color-8;
+        .participation {
+            // test
+        }
+        .benefits {
+            &::before {
+                @include benefitsbefore;
+            }
+            &::after {
+                @include benefitsafter;
+            }
+        }
+        .requirements {
+            &::before {
+                @include requirementsbefore;
+            }
+            &::after {
+                @include requirementsafter;
+            }
+        }
     }
 }
 
@@ -315,8 +355,6 @@ nav {
         padding-top: 5px;
         margin-bottom: 5px;
         list-style-type: none;
-    }
-    li {
         a {
             &:link {
                 color: $color-2;
@@ -346,10 +384,27 @@ nav {
         &>.wrapper>footer {
             grid-area: 4 / 1 / 4 / 1;
             text-align: center;
+            display: flex;
+            flex-direction: row;
             a:link,
             a:visited {
                 margin-right: 20px;
             }
         }
+    }
+}
+
+nav {
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    li {
+        list-style-type: none;
+        margin-top: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: $color-8;
     }
 }
