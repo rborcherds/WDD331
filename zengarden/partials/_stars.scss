@@ -12,7 +12,7 @@
 
 @mixin requirementsafter {
     content: " ";
-    position: relative;
+    position: absolute;
     height: 100vh;
     transform-style: preserve-3d;
     top: 0px;

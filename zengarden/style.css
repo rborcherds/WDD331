@@ -293,7 +293,7 @@ abbr[title] {
       z-index: 3; }
     .supporting .requirements::after {
       content: " ";
-      position: relative;
+      position: absolute;
       height: 100vh;
       transform-style: preserve-3d;
       top: 0px;
