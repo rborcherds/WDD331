@@ -216,6 +216,37 @@ abbr[title] {
   .intro .preamble {
     grid-area: 3 / 2 / 3 / 2; } }
 
+.supporting footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .supporting footer:nth-child(n+1) {
+    visibility: hidden; }
+  .supporting footer .zen-validate-html:after {
+    visibility: visible;
+    content: url("SVG/HTML.svg");
+    display: block;
+    width: 60px; }
+  .supporting footer .zen-validate-css:after {
+    visibility: visible;
+    content: url("SVG/CSS.svg");
+    display: block;
+    width: 60px; }
+  .supporting footer .zen-license:after {
+    visibility: visible;
+    content: url("SVG/CC.svg");
+    display: block;
+    width: 60px; }
+  .supporting footer .zen-accessibility:after {
+    visibility: visible;
+    content: url("SVG/ALLY.svg");
+    display: block;
+    width: 60px; }
+  .supporting footer .zen-github:after {
+    visibility: visible;
+    content: url("SVG/GH.svg");
+    display: block;
+    width: 60px; }
 @media only screen and (min-width: 768px) {
   .supporting {
     grid-area: 4 / 2 / 6 / 2; }
@@ -227,37 +258,6 @@ abbr[title] {
       grid-area: 4 / 2 / 4 / 2;
       display: flex;
       flex-direction: column; }
-    .supporting footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-      .supporting footer:nth-child(n+1) {
-        visibility: hidden; }
-      .supporting footer .zen-validate-html:after {
-        visibility: visible;
-        content: url("SVG/HTML.svg");
-        display: block;
-        width: 60px; }
-      .supporting footer .zen-validate-css:after {
-        visibility: visible;
-        content: url("SVG/CSS.svg");
-        display: block;
-        width: 60px; }
-      .supporting footer .zen-license:after {
-        visibility: visible;
-        content: url("SVG/CC.svg");
-        display: block;
-        width: 60px; }
-      .supporting footer .zen-accessibility:after {
-        visibility: visible;
-        content: url("SVG/ALLY.svg");
-        display: block;
-        width: 60px; }
-      .supporting footer .zen-github:after {
-        visibility: visible;
-        content: url("SVG/GH.svg");
-        display: block;
-        width: 60px; }
     .supporting .benefits::before {
       width: 2px;
       height: 2px;
