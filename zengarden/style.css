@@ -8,37 +8,6 @@ html {
   margin: 0;
   padding: 0; }
 
-body {
-  display: flex;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 1.5em;
-  color: #ffffff;
-  background: #000;
-  margin: 0; }
-  @media only screen and (min-width: 768px) {
-    body {
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      line-height: 1.5em;
-      display: grid;
-      grid-gap: 0px;
-      grid-template-columns: 1fr calc(80%) 1fr;
-      grid-template-rows: 350px auto auto auto auto;
-      width: 100vw;
-      background-image: url("stars.jpg");
-      background-attachment: fixed;
-      background-position: top;
-      background-repeat: repeat-x;
-      background-size: auto 350px; }
-      body::after {
-        grid-area: 1 / 3 / 1 / 3;
-        content: url("SVG/Asset24.svg");
-        width: 180px;
-        align-self: center;
-        margin-left: -150px; } }
-
 h1,
 h2,
 h3,
@@ -99,20 +68,47 @@ abbr[title] {
   border-bottom: none;
   text-decoration: dotted underline; }
 
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #ffffff;
+  background: #000;
+  margin: 0; }
+  @media only screen and (min-width: 768px) {
+    body {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      line-height: 1.5em;
+      display: grid;
+      grid-gap: 0px;
+      grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
+      grid-template-rows: 350px auto auto 350px auto auto auto auto auto;
+      grid-gap: 0 25px;
+      background-image: url("stars.jpg");
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: repeat-x;
+      background-size: auto 350px; }
+      body::after {
+        grid-area: 1 / 3 / 1 / 3;
+        content: url("SVG/Asset24.svg");
+        width: 180px;
+        align-self: center;
+        margin-left: -150px; } }
+
 /* specific divs */
 .page-wrapper {
   margin: 0; }
   @media only screen and (min-width: 768px) {
     .page-wrapper {
-      display: grid;
-      grid-gap: 25px;
-      grid-area: 2 / 1 / 3 / 3;
-      grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
-      grid-template-rows: auto auto auto auto auto auto;
-      width: 100vw;
+      display: flex;
+      flex-direction: column;
       background: #000; }
       .page-wrapper::after {
-        grid-area: 3 / 1 / 3 / 3;
+        grid-area: 3 / 1 / 3 / 4;
         display: flex;
         background-image: url("crab_nebula-crop.jpg");
         background-attachment: fixed;
@@ -122,13 +118,7 @@ abbr[title] {
         background-position: top center;
         width: 100vw;
         min-height: 300px;
-        content: " "; }
-      .page-wrapper > .intro {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-area: 1 / 2 / 1 / 2;
-        display: grid;
-        min-height: 700px; } }
+        content: " "; } }
 
 .summary,
 .preamble,
@@ -147,10 +137,10 @@ abbr[title] {
   .requirements h3 {
     align-items: flex-end; }
 
-.intro header {
+.page-wrapper.intro header {
   display: flex;
   flex-direction: column; }
-  .intro header h1 {
+  .page-wrapper.intro header h1 {
     margin-top: 10px;
     margin-bottom: 0;
     line-height: 1em;
@@ -160,16 +150,16 @@ abbr[title] {
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     font-size: 3.78em; }
-  .intro header h2 {
+  .page-wrapper.intro header h2 {
     font-size: 2.14em;
     margin-top: 10px;
     line-height: 1.2em;
     font-weight: 300; }
   @media only screen and (min-width: 768px) {
-    .intro header {
-      grid-area: 1 / 2 / 2 / 2;
+    .page-wrapper.intro header {
+      grid-area: 2 / 2 / 2 / 2;
       margin-top: -75px; }
-      .intro header::before {
+      .page-wrapper.intro header::before {
         width: 3px;
         height: 3px;
         background: transparent;
@@ -178,7 +168,7 @@ abbr[title] {
         -webkit-transform: translateZ(999px) scale(0.7);
         transform: translateZ(999px) scale(0.7);
         z-index: 1; }
-      .intro header::after {
+      .page-wrapper.intro header::after {
         content: " ";
         position: relative;
         height: 100vh;
@@ -194,7 +184,7 @@ abbr[title] {
         -webkit-transform: translateZ(999px) scale(0.7);
         transform: translateZ(999px) scale(0.7);
         z-index: 1; }
-      .intro header h3 {
+      .page-wrapper.intro header h3 {
         font-weight: 900;
         font-size: 1.5em;
         text-align: right;
@@ -208,12 +198,12 @@ abbr[title] {
         margin-bottom: 5px;
         color: linear-gradient(to right, #30CFD0 0%, #276dcc 35%, #330867 70%); } }
 @media only screen and (min-width: 768px) {
-  .intro .summary {
+  .page-wrapper.intro .summary {
     grid-area: 2 / 2 / 2 / 2; }
-    .intro .summary p {
+    .page-wrapper.intro .summary p {
       font: italic 1.2em/2.2 "Poppins", sans-serif;
       text-align: left; }
-  .intro .preamble {
+  .page-wrapper.intro .preamble {
     grid-area: 3 / 2 / 3 / 2; } }
 
 .supporting footer {
