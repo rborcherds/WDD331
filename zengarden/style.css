@@ -329,12 +329,12 @@ abbr[title] {
     .sidebar li a:first-of-type::after {
       content: "\a";
       white-space: pre; }
-  .sidebar .designer-name {
+  .sidebar a .designer-name {
     font-weight: 700;
     color: #cecece;
     font-size: 1.1em;
     letter-spacing: 1px; }
-    .sidebar .designer-name::after {
+    .sidebar a .designer-name::after {
       content: "\a";
       white-space: pre; }
   .sidebar .zen-resources li {
