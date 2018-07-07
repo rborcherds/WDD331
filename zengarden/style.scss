@@ -28,8 +28,6 @@ $primary-font: 'Poppins',
 sans-serif;
 $secondary-font: 'Poppins',
 sans-serif;
-//$n: 500;
-//$value: 500;
 html {
     margin: 0;
     padding: 0;
@@ -55,7 +53,6 @@ body {
         grid-gap: 0 25px;
         grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
         grid-template-rows: 350px auto auto auto auto auto;
-        // width: 100vw;
         background-image: url("stars.jpg");
         background-attachment: fixed;
         background-position: top;
