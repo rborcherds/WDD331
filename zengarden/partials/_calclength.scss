@@ -1,0 +1,33 @@
+/**
+ * Check whether `$value` is a valid length.
+ * @param {*} $value - Value to validate.
+ * @return {Bool}
+ */
+
+@function is-length($value) {
+    @return not not index(0 "auto" "initial" "inherit", $value) or type-of($value)=="number" and not unitless($value) or str-slice($value + "", 1, 4)=="calc";
+}
+
+
+/**
+ * Set `width` and `height` in a single statement.
+ * @param {Number} $width - Width.
+ * @param {Number} $height ($width) - Height.
+ * @output `width` and `height`.
+ * @requires {function} is-length
+ */
+
+@mixin size($width, $height: $width) {
+    @if is-length($width) {
+        width: $width;
+    }
+    @else {
+        @warn "Invalid length `#{$width}` for `$width` parameter in `size` mixin.";
+    }
+    @if is-length($height) {
+        height: $height;
+    }
+    @else {
+        @warn "Invalid length `#{$height}` for `$height` parameter in `size` mixin.";
+    }
+}

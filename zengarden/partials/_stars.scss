@@ -13,7 +13,6 @@
 @mixin requirementsafter {
     content: " ";
     position: absolute;
-    height: 100vh;
     transform-style: preserve-3d;
     top: 0px;
     width: 1px;
@@ -39,8 +38,7 @@
 
 @mixin benefitsafter {
     content: " ";
-    position: relative;
-    height: 100vh;
+    position: absolute;
     transform-style: preserve-3d;
     top: 0px;
     width: 2px;
@@ -66,8 +64,7 @@
 
 @mixin introafter {
     content: " ";
-    position: relative;
-    height: 100vh;
+    position: absolute;
     transform-style: preserve-3d;
     top: 0px;
     width: 3px;
