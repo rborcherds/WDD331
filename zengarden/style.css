@@ -63,7 +63,8 @@ h4 {
 
 p {
   margin-top: 0;
-  text-align: left; }
+  text-align: left;
+  line-height: 2em; }
 
 h1 {
   font-weight: 900;
@@ -112,8 +113,7 @@ a:hover, a:focus, a:active {
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: dotted underline;
-  text-indent: 5px; }
+  text-decoration: dotted underline; }
 
 /* specific divs */
 .page-wrapper {
@@ -168,7 +168,6 @@ abbr[title] {
   .participation a,
   .benefits a,
   .requirements a {
-    text-indent: 5px;
     font-weight: bold;
     text-decoration: none;
     border-bottom: #be50a9 solid; }
@@ -179,9 +178,7 @@ abbr[title] {
     .benefits a:hover,
     .requirements a:hover {
       border-top: #be50a9 solid;
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1); }
+      visibility: visible; }
 
 @media only screen and (min-width: 768px) {
   .intro {
@@ -348,8 +345,7 @@ abbr[title] {
       font-size: 1.1em;
       text-transform: none;
       list-style-type: none;
-      text-indent: 1em;
-      display: flex; }
+      text-indent: 1em; }
   .sidebar .zen-resources .view-css::before {
     visibility: visible;
     content: url("SVG/Asset_16.svg");

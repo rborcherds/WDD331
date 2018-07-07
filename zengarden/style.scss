@@ -79,6 +79,7 @@ h4 {
 p {
     margin-top: 0;
     text-align: left;
+    line-height: 2em;
 }
 
 h1 {
@@ -139,7 +140,6 @@ a {
 abbr[title] {
     border-bottom: none;
     text-decoration: dotted underline;
-    text-indent: 5px;
 }
 
 
@@ -188,15 +188,12 @@ abbr[title] {
         align-items: flex-end;
     }
     a {
-        text-indent: 5px;
         font-weight: bold;
         text-decoration: none;
         border-bottom: $color-4 solid;
         &:hover {
             border-top: $color-4 solid;
             visibility: visible;
-            -webkit-transform: scaleX(1);
-            transform: scaleX(1);
         }
     }
 }
@@ -385,7 +382,6 @@ abbr[title] {
                 text-transform: none;
                 list-style-type: none;
                 text-indent: 1em;
-                display: flex;
             }
         }
         .view-css {
