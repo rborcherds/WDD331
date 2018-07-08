@@ -183,7 +183,12 @@ abbr[title] {
   border-bottom: #be50a9 solid; }
   .summary a:hover {
     border-top: #be50a9 solid;
-    visibility: visible; }
+    visibility: visible;
+    -webkit-transition: border 1s ease;
+    -moz-transition: border 1s ease;
+    -o-transition: border 1s ease;
+    -ms-transition: border 1s ease;
+    transition: border 1s ease; }
 
 @media only screen and (min-width: 768px) {
   .intro {

@@ -208,6 +208,11 @@ abbr[title] {
         &:hover {
             border-top: $color-4 solid;
             visibility: visible;
+            -webkit-transition: border 1s ease;
+            -moz-transition: border 1s ease;
+            -o-transition: border 1s ease;
+            -ms-transition: border 1s ease;
+            transition: border 1s ease;
         }
     }
 }
