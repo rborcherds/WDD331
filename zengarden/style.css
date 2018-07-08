@@ -58,8 +58,8 @@ body {
         grid-area: 1 / 3 / 1 / 3;
         content: url("SVG/Asset_22.svg");
         width: 150px;
-        margin-left: 125px;
-        margin-top: 200px; }
+        margin-left: 100px;
+        margin-top: 150px; }
       body::after {
         visibility: visible;
         grid-area: 1 / 3 / 1 / 3;
@@ -342,9 +342,9 @@ abbr[title] {
     margin-bottom: 5px;
     list-style-type: none; }
     .sidebar li a:link {
-      color: #276dcc; }
+      color: #cecece; }
     .sidebar li a:visited {
-      color: #276dcc; }
+      color: #cecece; }
   .sidebar li a:first-of-type {
     font-weight: 900;
     color: #ffffff;
@@ -353,6 +353,14 @@ abbr[title] {
     letter-spacing: 1px;
     list-style-type: none; }
     .sidebar li a:first-of-type::after {
+      content: "\a";
+      white-space: pre; }
+  .sidebar .designer-name {
+    font-weight: 700;
+    color: #cecece;
+    font-size: 1.1em;
+    letter-spacing: 1px; }
+    .sidebar .designer-name::after {
       content: "\a";
       white-space: pre; }
   .sidebar .zen-resources li {
@@ -403,8 +411,8 @@ abbr[title] {
         grid-area: 1 / 3 / 1 / 3;
         content: url("SVG/Asset_27.svg");
         width: 40px;
-        right: 30%;
-        top: 200px; }
+        margin-left: -400px;
+        margin-top: -150px; }
       .sidebar > .wrapper {
         grid-area: 1 / 1 / 5 / 1;
         display: grid;
@@ -426,13 +434,5 @@ nav li {
 nav a {
   text-decoration: none;
   color: #cecece; }
-  nav a .designer-name {
-    font-weight: 700;
-    color: #cecece;
-    font-size: 1.1em;
-    letter-spacing: 1px; }
-    nav a .designer-name::after {
-      content: "\a";
-      white-space: pre; }
 
 /*# sourceMappingURL=style.css.map */
