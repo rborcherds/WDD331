@@ -2,6 +2,7 @@
 Quiz
 *.zip
 *.xcf
+*.eps
 style-guide-template/
 node_modules/
 *.json
