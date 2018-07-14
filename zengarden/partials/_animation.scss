@@ -1,0 +1,12 @@
+@mixin rotations {
+    @keyframes rot {
+        from {
+            transform: rotate(0deg) //translate(-100px)
+            //rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg) //translate(-100px) 
+            //rotate(-360deg);
+        }
+    }
+}

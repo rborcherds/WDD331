@@ -28,11 +28,6 @@ html {
       overflow-x: hidden;
       overflow-y: auto; } }
 
-@keyframes rot {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
 body {
   display: flex;
   font-family: "Poppins", sans-serif;
@@ -71,27 +66,7 @@ body {
         content: url("SVG/Asset_24.svg");
         width: 100px;
         margin-left: -150px;
-        margin-top: 120px; }
-    @-webkit-keyframes orbit {
-      from {
-        -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg); }
-      to {
-        -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
-    @-moz-keyframes orbit {
-      from {
-        -moz-transform: rotate(0deg) translateX(100px) rotate(0deg); }
-      to {
-        -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
-    @-o-keyframes orbit {
-      from {
-        -o-transform: rotate(0deg) translateX(100px) rotate(0deg); }
-      to {
-        -o-transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
-    @keyframes orbit {
-      from {
-        transform: rotate(0deg); }
-      to {
-        transform: rotate(360deg); } } }
+        margin-top: 120px; } }
 
 h1,
 h2,
@@ -213,6 +188,12 @@ abbr[title] {
     -o-transition: border;
     -ms-transition: border;
     transition: border; }
+@media only screen and (min-width: 768px) {
+  .summary {
+    grid-area: 3 / 2 / 3 / 2; }
+    .summary p {
+      font: italic 1.2em/2.2 "Poppins", sans-serif;
+      text-align: left; } }
 
 @media only screen and (min-width: 768px) {
   .intro {
@@ -228,11 +209,14 @@ abbr[title] {
       display: block;
       width: 150px;
       margin-right: -250px;
-      padding: 50px 50px 0 50px; } }
-.intro header {
+      padding: 50px 50px 0 50px; }
+    .intro .preamble {
+      grid-area: 4 / 2 / 4 / 2; } }
+
+header {
   display: flex;
   flex-direction: column; }
-  .intro header h1 {
+  header h1 {
     margin-top: 10px;
     margin-bottom: 0;
     line-height: 1em;
@@ -242,16 +226,16 @@ abbr[title] {
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     font-size: 3.78em; }
-  .intro header h2 {
+  header h2 {
     font-size: 2.14em;
     margin-top: 10px;
     line-height: 1.2em;
     font-weight: 300; }
   @media only screen and (min-width: 768px) {
-    .intro header {
+    header {
       grid-area: 2 / 2 / 2 / 2;
       margin-top: -100px; }
-      .intro header h3 {
+      header h3 {
         font-weight: 900;
         font-size: 1.5em;
         text-align: right;
@@ -264,14 +248,6 @@ abbr[title] {
         margin-top: 20px;
         margin-bottom: 5px;
         color: linear-gradient(to right, #30CFD0 0%, #276dcc 45%, #330867 85%); } }
-@media only screen and (min-width: 768px) {
-  .intro .summary {
-    grid-area: 3 / 2 / 3 / 2; }
-    .intro .summary p {
-      font: italic 1.2em/2.2 "Poppins", sans-serif;
-      text-align: left; }
-  .intro .preamble {
-    grid-area: 4 / 2 / 4 / 2; } }
 
 .supporting footer {
   display: flex;
@@ -464,14 +440,10 @@ nav a {
   text-decoration: none;
   color: #cecece; }
 
-nav ul {
-  margin-left: 0;
-  padding-left: 0; }
-nav li {
-  list-style-type: none;
-  margin-top: 10px; }
-nav a {
-  text-decoration: none;
-  color: #cecece; }
+@keyframes rot {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */

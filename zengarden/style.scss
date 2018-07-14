@@ -3,6 +3,7 @@
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
 @import 'partials/stars';
+@import 'partials/animation';
 // color palette - these colors will be the color swatches of the Colors section
 $color-1: #30CFD0;
 $color-2: #276dcc;
@@ -37,18 +38,7 @@ html {
         }
     }
 }
-@keyframes rot {
-	from {
-		transform: rotate(0deg)
-			//translate(-100px)
-			//rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-			//translate(-100px) 
-			//rotate(-360deg);
-	}
-}
+
 body {
     display: flex;
     font-family: $primary-font;
@@ -79,8 +69,8 @@ body {
             content: url("SVG/Asset_27.svg");
             width: 40px;
             margin-left: -125px;
-			animation: rot 3s infinite linear;
-			//background-color: #ce0000;
+            animation: rot 3s infinite linear;
+            //background-color: #ce0000;
         }
         &::after {
             visibility: visible;
@@ -89,38 +79,6 @@ body {
             width: 100px;
             margin-left: -150px;
             margin-top: 120px;
-        }
-        @-webkit-keyframes orbit {
-            from {
-                -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg);
-            }
-            to {
-                -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg);
-            }
-        }
-        @-moz-keyframes orbit {
-            from {
-                -moz-transform: rotate(0deg) translateX(100px) rotate(0deg);
-            }
-            to {
-                -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg);
-            }
-        }
-        @-o-keyframes orbit {
-            from {
-                -o-transform: rotate(0deg) translateX(100px) rotate(0deg);
-            }
-            to {
-                -o-transform: rotate(360deg) translateX(100px) rotate(-360deg);
-            }
-        }
-        @keyframes orbit {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
         }
     }
 }
@@ -187,8 +145,8 @@ a {
         color: $color-1;
     }
     &:hover,
-		&:focus,
-		&:active {
+    &:focus,
+    &:active {
         text-decoration: underline;
         color: $color-1;
     }
@@ -261,6 +219,13 @@ abbr[title] {
             transition: border;
         }
     }
+    @include MQ(S) {
+        grid-area: 3 / 2 / 3 / 2;
+        p {
+            font: italic 1.2em/2.2 $primary-font;
+            text-align: left;
+        }
+    }
 }
 
 .intro {
@@ -279,56 +244,48 @@ abbr[title] {
             margin-right: -250px;
             padding: 50px 50px 0 50px;
         }
+        .preamble {
+            grid-area: 4 / 2 / 4 / 2;
+        }
     }
-    header {
-        display: flex;
-        flex-direction: column;
-        h1 {
-            margin-top: 10px;
-            margin-bottom: 0;
-            line-height: 1em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 1em;
+        background: $color-7;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        font-size: 3.78em;
+    }
+    h2 {
+        font-size: 2.14em;
+        margin-top: 10px;
+        line-height: 1.2em;
+        font-weight: 300;
+    }
+    @include MQ(S) {
+        grid-area: 2 / 2 / 2 / 2;
+        margin-top: -100px;
+        h3 {
+            font-weight: 900;
+            font-size: 1.5em;
+            text-align: right;
+            text-transform: uppercase;
             background: $color-7;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            font-size: 3.78em;
-        }
-        h2 {
-            font-size: 2.14em;
-            margin-top: 10px;
-            line-height: 1.2em;
-            font-weight: 300;
-        }
-        @include MQ(S) {
-            grid-area: 2 / 2 / 2 / 2;
-            margin-top: -100px;
-            h3 {
-                font-weight: 900;
-                font-size: 1.5em;
-                text-align: right;
-                text-transform: uppercase;
-                background: $color-7;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                letter-spacing: 1px;
-                margin-top: 20px;
-                margin-bottom: 5px;
-                color: $color-7;
-            }
-        }
-    }
-    @include MQ(S) {
-        .summary {
-            grid-area: 3 / 2 / 3 / 2;
-            p {
-                font: italic 1.2em/2.2 $primary-font;
-                text-align: left;
-            }
-        }
-        .preamble {
-            grid-area: 4 / 2 / 4 / 2;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            color: $color-7;
         }
     }
 }
@@ -559,17 +516,4 @@ nav {
     }
 }
 
-nav {
-    ul {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    li {
-        list-style-type: none;
-        margin-top: 10px;
-    }
-    a {
-        text-decoration: none;
-        color: $color-8;
-    }
-}
+@include rotations;

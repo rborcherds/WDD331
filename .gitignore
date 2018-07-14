@@ -16,3 +16,6 @@ test
 foundation/
 .sass-cache/
 .comments/
+zengarden/style.css
+zengarden/style.css.map
+zengarden/.sass-cache/*
