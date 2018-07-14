@@ -8,24 +8,25 @@
 html {
   margin: 0;
   padding: 0; }
-  html::after {
-    content: " ";
-    position: absolute;
-    transform-style: preserve-3d;
-    top: 0px;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: 54px 1184px #FFF, 1783px 1081px #FFF, 802px 368px #FFF, 16px 1961px #FFF, 1911px 282px #FFF, 1519px 1100px #FFF, 1114px 1096px #FFF, 26px 1669px #FFF, 1649px 1766px #FFF, 418px 316px #FFF, 1824px 1678px #FFF, 1185px 1426px #FFF, 1088px 833px #FFF, 1241px 450px #FFF, 44px 1306px #FFF, 716px 817px #FFF, 779px 291px #FFF, 823px 1091px #FFF, 1025px 840px #FFF, 764px 678px #FFF, 1709px 484px #FFF, 1006px 1067px #FFF, 1205px 657px #FFF, 1005px 1816px #FFF, 795px 1609px #FFF, 43px 871px #FFF, 169px 1322px #FFF, 3px 1692px #FFF, 625px 1094px #FFF, 1716px 1739px #FFF, 18px 1257px #FFF, 1335px 550px #FFF, 551px 1502px #FFF, 725px 260px #FFF, 1541px 142px #FFF, 1785px 1871px #FFF, 93px 822px #FFF, 1088px 1410px #FFF, 340px 1650px #FFF, 643px 911px #FFF, 1359px 400px #FFF, 1872px 173px #FFF, 109px 1301px #FFF, 1127px 1691px #FFF, 1715px 47px #FFF, 1084px 1661px #FFF, 878px 264px #FFF, 1824px 1681px #FFF, 1204px 919px #FFF, 1660px 975px #FFF, 364px 635px #FFF, 1617px 1392px #FFF, 1515px 1222px #FFF, 544px 212px #FFF, 942px 338px #FFF, 1306px 566px #FFF, 505px 1413px #FFF, 1760px 1284px #FFF, 798px 985px #FFF, 1425px 376px #FFF, 398px 1785px #FFF, 531px 244px #FFF, 680px 1961px #FFF, 655px 1066px #FFF, 980px 1794px #FFF, 1465px 569px #FFF, 1178px 1272px #FFF, 464px 1922px #FFF, 523px 645px #FFF, 818px 1563px #FFF, 549px 1183px #FFF, 400px 463px #FFF, 129px 1893px #FFF, 558px 759px #FFF, 1956px 947px #FFF, 1985px 965px #FFF, 1981px 1793px #FFF, 908px 1474px #FFF, 1385px 531px #FFF, 548px 1131px #FFF, 944px 366px #FFF, 956px 9px #FFF, 52px 1548px #FFF, 1162px 29px #FFF, 873px 1702px #FFF, 922px 778px #FFF, 1349px 957px #FFF, 1352px 1774px #FFF, 532px 1754px #FFF, 1894px 28px #FFF, 1000px 721px #FFF, 147px 1171px #FFF, 379px 13px #FFF, 642px 1667px #FFF, 1761px 1083px #FFF, 1968px 1708px #FFF, 1730px 1818px #FFF, 1516px 1777px #FFF, 1641px 1534px #FFF, 1047px 195px #FFF;
-    animation: animStar 125s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transform: translateZ(999px) scale(0.7);
-    transform: translateZ(999px) scale(0.7);
-    z-index: 1;
-    perspective: 1px;
-    overflow-x: hidden;
-    overflow-y: auto; }
+  @media only screen and (min-width: 768px) {
+    html::after {
+      content: " ";
+      position: absolute;
+      transform-style: preserve-3d;
+      top: 0px;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: 54px 1184px #FFF, 1783px 1081px #FFF, 802px 368px #FFF, 16px 1961px #FFF, 1911px 282px #FFF, 1519px 1100px #FFF, 1114px 1096px #FFF, 26px 1669px #FFF, 1649px 1766px #FFF, 418px 316px #FFF, 1824px 1678px #FFF, 1185px 1426px #FFF, 1088px 833px #FFF, 1241px 450px #FFF, 44px 1306px #FFF, 716px 817px #FFF, 779px 291px #FFF, 823px 1091px #FFF, 1025px 840px #FFF, 764px 678px #FFF, 1709px 484px #FFF, 1006px 1067px #FFF, 1205px 657px #FFF, 1005px 1816px #FFF, 795px 1609px #FFF, 43px 871px #FFF, 169px 1322px #FFF, 3px 1692px #FFF, 625px 1094px #FFF, 1716px 1739px #FFF, 18px 1257px #FFF, 1335px 550px #FFF, 551px 1502px #FFF, 725px 260px #FFF, 1541px 142px #FFF, 1785px 1871px #FFF, 93px 822px #FFF, 1088px 1410px #FFF, 340px 1650px #FFF, 643px 911px #FFF, 1359px 400px #FFF, 1872px 173px #FFF, 109px 1301px #FFF, 1127px 1691px #FFF, 1715px 47px #FFF, 1084px 1661px #FFF, 878px 264px #FFF, 1824px 1681px #FFF, 1204px 919px #FFF, 1660px 975px #FFF, 364px 635px #FFF, 1617px 1392px #FFF, 1515px 1222px #FFF, 544px 212px #FFF, 942px 338px #FFF, 1306px 566px #FFF, 505px 1413px #FFF, 1760px 1284px #FFF, 798px 985px #FFF, 1425px 376px #FFF, 398px 1785px #FFF, 531px 244px #FFF, 680px 1961px #FFF, 655px 1066px #FFF, 980px 1794px #FFF, 1465px 569px #FFF, 1178px 1272px #FFF, 464px 1922px #FFF, 523px 645px #FFF, 818px 1563px #FFF, 549px 1183px #FFF, 400px 463px #FFF, 129px 1893px #FFF, 558px 759px #FFF, 1956px 947px #FFF, 1985px 965px #FFF, 1981px 1793px #FFF, 908px 1474px #FFF, 1385px 531px #FFF, 548px 1131px #FFF, 944px 366px #FFF, 956px 9px #FFF, 52px 1548px #FFF, 1162px 29px #FFF, 873px 1702px #FFF, 922px 778px #FFF, 1349px 957px #FFF, 1352px 1774px #FFF, 532px 1754px #FFF, 1894px 28px #FFF, 1000px 721px #FFF, 147px 1171px #FFF, 379px 13px #FFF, 642px 1667px #FFF, 1761px 1083px #FFF, 1968px 1708px #FFF, 1730px 1818px #FFF, 1516px 1777px #FFF, 1641px 1534px #FFF, 1047px 195px #FFF;
+      animation: animStar 125s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-transform: translateZ(999px) scale(0.7);
+      transform: translateZ(999px) scale(0.7);
+      z-index: 1;
+      perspective: 1px;
+      overflow-x: hidden;
+      overflow-y: auto; } }
 
 @keyframes rot {
   from {
@@ -52,11 +53,11 @@ body {
       grid-gap: 0 25px;
       grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
       grid-template-rows: 350px auto auto auto auto auto;
-      background-image: url("stars.jpg");
+      background-image: url("stars1.jpg");
       background-attachment: fixed;
       background-position: top;
-      background-repeat: repeat-x;
-      background-size: auto 400px; }
+      background-repeat: repeat-y;
+      background-size: 100vw; }
       body::before {
         visibility: visible;
         grid-area: 1 / 3 / 1 / 3;
@@ -88,9 +89,9 @@ body {
         -o-transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
     @keyframes orbit {
       from {
-        transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        transform: rotate(0deg); }
       to {
-        transform: rotate(360deg) translateX(100px) rotate(-360deg); } } }
+        transform: rotate(360deg); } } }
 
 h1,
 h2,
@@ -203,16 +204,15 @@ abbr[title] {
 
 .summary a {
   font-weight: bold;
-  text-decoration: none;
-  border-bottom: #be50a9 solid; }
+  text-decoration: none; }
   .summary a:hover {
-    border-top: #be50a9 solid;
+    border-bottom: #be50a9 solid;
     visibility: visible;
-    -webkit-transition: border 0.5s ease-in;
-    -moz-transition: border 0.5s ease-in;
-    -o-transition: border 0.5s ease-in;
-    -ms-transition: border 0.5s ease-in;
-    transition: border 0.5s ease-in; }
+    -webkit-transition: border;
+    -moz-transition: border;
+    -o-transition: border;
+    -ms-transition: border;
+    transition: border; }
 
 @media only screen and (min-width: 768px) {
   .intro {
@@ -440,7 +440,7 @@ abbr[title] {
         grid-area: 1 / 3 / 1 / 3;
         content: url("SVG/Asset_22.svg");
         width: 150px;
-        margin-left: calc(-100vw/7);
+        margin-left: calc(-100vw/6);
         margin-top: -200px; }
       .sidebar > .wrapper {
         grid-area: 1 / 1 / 5 / 1;
