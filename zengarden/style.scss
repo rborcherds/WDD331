@@ -66,7 +66,7 @@ body {
             content: url("SVG/Asset_27.svg");
             width: 40px;
             margin-left: -125px;
-            margin-top: -245px;
+            margin-top: 150px;
             -webkit-animation: orbit 4s linear infinite;
             /* Chrome, Safari 5 */
             -moz-animation: orbit 4s linear infinite;
@@ -519,7 +519,7 @@ abbr[title] {
             content: url("SVG/Asset_22.svg");
             width: 150px;
             margin-left: calc(-100vw/7);
-            margin-top: 150px;
+            margin-top: -200px;
         }
         &>.wrapper {
             grid-area: 1 / 1 / 5 / 1;
