@@ -5,7 +5,7 @@
  */
 
 @function is-length($value) {
-    @return not not index(0 "auto" "initial" "inherit", $value) or type-of($value)=="number" and not unitless($value) or str-slice($value + "", 1, 4)=="calc";
+    @return not index(0 "auto" "initial" "inherit", $value) or type-of($value)=="number" and not unitless($value) or str-slice($value + "", 1, 4)=="calc";
 }
 
 
