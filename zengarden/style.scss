@@ -35,7 +35,18 @@ html {
         @include introafter;
     }
 }
-
+@keyframes rot {
+	from {
+		transform: rotate(0deg)
+			//translate(-100px)
+			//rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+			//translate(-100px) 
+			//rotate(-360deg);
+	}
+}
 body {
     display: flex;
     font-family: $primary-font;
@@ -66,16 +77,8 @@ body {
             content: url("SVG/Asset_27.svg");
             width: 40px;
             margin-left: -125px;
-            margin-top: 150px;
-            -webkit-animation: orbit 4s linear infinite;
-            /* Chrome, Safari 5 */
-            -moz-animation: orbit 4s linear infinite;
-            /* Firefox 5-15 */
-            -o-animation: orbit 4s linear infinite;
-            /* Opera 12+ */
-            animation: orbit 4s linear infinite;
-            /* Chrome, Firefox 16+, 
-                                                      IE 10+, Safari 5 */
+			animation: rot 3s infinite linear;
+			//background-color: #ce0000;
         }
         &::after {
             visibility: visible;
@@ -182,8 +185,8 @@ a {
         color: $color-1;
     }
     &:hover,
-    &:focus,
-    &:active {
+		&:focus,
+		&:active {
         text-decoration: underline;
         color: $color-1;
     }
