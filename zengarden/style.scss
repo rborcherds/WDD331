@@ -63,6 +63,7 @@ body {
         background-position: top;
         background-repeat: repeat-y;
         background-size: 100vw;
+        cursor: url('SVG/ufo.png'), auto;	
         &::before {
             visibility: visible;
             grid-area: 1 / 3 / 1 / 3;
