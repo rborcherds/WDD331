@@ -2,7 +2,8 @@
 @import 'normalize.css';
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
-@import 'partials/stars';
+//@import 'partials/stars';
+@import 'partials/twinklingStars';
 @import 'partials/animation';
 // color palette - these colors will be the color swatches of the Colors section
 $color-1: #30CFD0;
@@ -353,13 +354,15 @@ header {
         .benefits {
             grid-area: 5 / 2 / 5 / 2;
             &::after {
-                @include benefitsafter;
+                //@include benefitsafter;
+				@include stars
             }
         }
         .requirements {
             grid-area: 6 / 2 / 6 / 2;
             &::after {
-                @include requirementsafter;
+                //@include requirementsafter;
+				@include twinkling
             }
         }
     }
