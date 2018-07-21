@@ -39,6 +39,9 @@ html {
         &::after {
             @include closeStars;
         }
+		&::before {
+            @include midStars;
+        }
     }
 }
 body {
