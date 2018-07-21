@@ -1,28 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,700,900");
 @import url(normalize.css);
-@keyframes move-twink-back {
+@keyframes animStar {
   from {
-    background-position: 0 0; }
+    transform: translateY(0); }
   to {
-    background-position: -10000px 5000px; } }
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -10000px 5000px; } }
-@-moz-keyframes move-twink-back {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -10000px 5000px; } }
-@-ms-keyframes move-twink-back {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: -10000px 5000px; } }
+    transform: translateY(-100vh); } }
 html {
   margin: 0;
   padding: 0; }
+  html::after {
+    background: url("SVG/bigstars-01.svg") repeat top center;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 350vh;
+    width: 100%;
+    z-index: 10;
+    animation: animStar 175s linear infinite;
+    -webkit-transform: translateZ(-999px) scale(2);
+    transform: translateZ(-999px) scale(2); }
 
 body {
   display: flex;
@@ -149,7 +148,21 @@ abbr[title] {
         background-position: top center;
         width: 99vw;
         min-height: 350px;
-        content: " "; } }
+        content: " "; }
+      .page-wrapper::before {
+        background: url("SVG/smallstars-01.svg") repeat top center;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 450vh;
+        width: 100%;
+        z-index: 10;
+        animation: animStar 375s linear infinite;
+        -webkit-transform: translateZ(-999px) scale(2);
+        transform: translateZ(-999px) scale(2); } }
 
 .summary,
 .preamble,
@@ -213,13 +226,7 @@ abbr[title] {
 
 header {
   display: flex;
-  flex-direction: column;
-  /*	&::before {
-  		@include stars;
-  	}
-  	&::before {
-  		@include twinkling;
-  	}*/ }
+  flex-direction: column; }
   header h1 {
     margin-top: 10px;
     margin-bottom: 0;

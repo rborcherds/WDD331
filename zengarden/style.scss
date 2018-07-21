@@ -2,8 +2,8 @@
 @import 'normalize.css';
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
-//@import 'partials/stars';
-@import 'partials/twinklingstars';
+@import 'partials/stars';
+//@import 'partials/twinklingstars';
 @import 'partials/animation';
 // color palette - these colors will be the color swatches of the Colors section
 $color-1: #30CFD0;
@@ -36,6 +36,9 @@ html {
     @include MQ(S) {
 
     }
+	&::after {
+		@include closeStars;
+	}
 }
 
 body {
@@ -184,6 +187,9 @@ abbr[title] {
             min-height: 350px;
             content: " ";
         }
+		&::before {
+			@include farStars;
+		}
     }
 }
 
@@ -253,12 +259,6 @@ abbr[title] {
 header {
     display: flex;
     flex-direction: column;
-/*	&::before {
-		@include stars;
-	}
-	&::before {
-		@include twinkling;
-	}*/
     h1 {
         margin-top: 10px;
         margin-bottom: 0;
