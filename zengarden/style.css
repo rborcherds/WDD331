@@ -8,20 +8,24 @@
 html {
   margin: 0;
   padding: 0; }
-  html::after {
-    background: url("SVG/bigstars-01.svg") repeat top center;
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 350vh;
-    width: 100%;
-    z-index: 10;
-    animation: animStar 175s linear infinite;
-    -webkit-transform: translateZ(-999px) scale(2);
-    transform: translateZ(-999px) scale(2); }
+  @media only screen and (min-width: 768px) {
+    html {
+      margin: 0;
+      padding: 0; }
+      html::after {
+        background: url("SVG/bigstars-01.svg") repeat top center;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 350vh;
+        width: 100%;
+        z-index: 10;
+        animation: animStar 175s linear infinite;
+        -webkit-transform: translateZ(-999px) scale(2);
+        transform: translateZ(-999px) scale(2); } }
 
 body {
   display: flex;
@@ -35,6 +39,7 @@ body {
   padding: 5px 10px 5px 10px; }
   @media only screen and (min-width: 768px) {
     body {
+      max-height: 3200px;
       padding: 0;
       font-family: "Poppins", sans-serif;
       font-size: 16px;
@@ -43,11 +48,11 @@ body {
       grid-gap: 0 25px;
       grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
       grid-template-rows: 350px auto auto auto auto auto;
-      background-image: url("stars1.jpg");
+      background-image: url("stars.jpg");
       background-attachment: fixed;
       background-position: top;
-      background-repeat: repeat-y;
-      background-size: 100vw;
+      background-repeat: repeat-x;
+      background-size: auto;
       cursor: url("SVG/ufo.png"), auto; }
       body::before {
         visibility: visible;
@@ -152,7 +157,7 @@ abbr[title] {
       .page-wrapper::before {
         background: url("SVG/smallstars-01.svg") repeat top center;
         content: " ";
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;

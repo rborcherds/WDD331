@@ -1,14 +1,14 @@
 @mixin closeStars {
 	background: url("SVG/bigstars-01.svg") repeat top center;
 	content: " ";
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	height:350vh;
-	width:100%;
-	z-index:10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 350vh;
+	width: 100%;
+	z-index: 10;
 	animation: animStar 175s linear infinite;
 	-webkit-transform: translateZ(-999px) scale(2);
 	transform: translateZ(-999px) scale(2);
@@ -17,24 +17,24 @@
 @mixin farStars {
 	background: url("SVG/smallstars-01.svg") repeat top center;
 	content: " ";
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	height:450vh;
-	width:100%;
-	z-index:10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 450vh;
+	width: 100%;
+	z-index: 10;
 	animation: animStar 375s linear infinite;
 	-webkit-transform: translateZ(-999px) scale(2);
 	transform: translateZ(-999px) scale(2);
 }
 
 @keyframes animStar {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100vh);
-    }
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-100vh);
+	}
 }
