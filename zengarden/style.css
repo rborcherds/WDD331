@@ -11,7 +11,8 @@ html {
   @media only screen and (min-width: 768px) {
     html {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      cursor: url("SVG/ufo.png"), auto; }
       html::after {
         background: url("SVG/bigstars-01.svg") repeat top center;
         content: " ";
@@ -22,7 +23,7 @@ html {
         bottom: 0;
         height: 1000vh;
         width: 100%;
-        z-index: 12;
+        z-index: 1;
         animation: animStar 150s linear infinite;
         -webkit-transform: translateZ(-999px) scale(2); }
       html::before {
@@ -35,7 +36,7 @@ html {
         bottom: 0;
         height: 1000vh;
         width: 100%;
-        z-index: 11;
+        z-index: 1;
         animation: animStar 300s linear infinite;
         -webkit-transform: translateZ(-999px) scale(2); } }
 
@@ -64,8 +65,7 @@ body {
       background-attachment: fixed;
       background-position: top;
       background-repeat: repeat-x;
-      background-size: auto;
-      cursor: url("SVG/ufo.png"), auto; }
+      background-size: auto; }
       body::before {
         visibility: visible;
         grid-area: 1 / 3 / 1 / 3;
@@ -127,17 +127,24 @@ h3 {
       text-align: right;
       align-self: flex-end; } }
 
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #30CFD0; }
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #30CFD0; }
-a:hover, a:focus, a:active {
-  text-decoration: underline;
-  color: #30CFD0; }
+a {
+  position: relative;
+  z-index: 99; }
+  a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #30CFD0; }
+  a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #30CFD0; }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+    color: #30CFD0; }
+  a:hover {
+    position: relative;
+    z-index: 99;
+    cursor: pointer; }
 
 abbr[title] {
   border-bottom: none;
@@ -176,7 +183,7 @@ abbr[title] {
         bottom: 0;
         height: 1000vh;
         width: 100%;
-        z-index: 10;
+        z-index: 1;
         animation: animStar 450s linear infinite;
         -webkit-transform: translateZ(-999px) scale(2); } }
 
@@ -195,7 +202,8 @@ abbr[title] {
   .participation p,
   .benefits p,
   .requirements p {
-    display: inline-block; }
+    display: inline-block;
+    z-index: 2; }
   .summary h3,
   .preamble h3,
   .explanation h3,
@@ -208,6 +216,9 @@ abbr[title] {
   font-weight: bold;
   text-decoration: none; }
   .summary a:hover {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
     border-bottom: #be50a9 solid;
     visibility: visible;
     -webkit-transition: border;
@@ -438,7 +449,9 @@ nav li {
   margin-top: 10px; }
 nav a {
   text-decoration: none;
-  color: #cecece; }
+  color: #cecece;
+  position: relative;
+  z-index: 2; }
 
 @keyframes rot {
   from {

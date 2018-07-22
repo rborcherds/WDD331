@@ -8,10 +8,9 @@
 	bottom: 0;
 	height: 1000vh;
 	width: 100%;
-	z-index: 12;
+	z-index: 1;
 	animation: animStar 150s linear infinite;
-	-webkit-transform: translateZ(-999px) scale(2);
-	//transform: translateZ(-999px) scale(2);
+	-webkit-transform: translateZ(-999px) scale(2); //transform: translateZ(-999px) scale(2);
 }
 
 @mixin midStars {
@@ -24,10 +23,9 @@
 	bottom: 0;
 	height: 1000vh;
 	width: 100%;
-	z-index: 11;
+	z-index: 1;
 	animation: animStar 300s linear infinite;
-	-webkit-transform: translateZ(-999px) scale(2);
-	//transform: translateZ(-999px) scale(6);
+	-webkit-transform: translateZ(-999px) scale(2); //transform: translateZ(-999px) scale(6);
 }
 
 @mixin farStars {
@@ -40,11 +38,11 @@
 	bottom: 0;
 	height: 1000vh;
 	width: 100%;
-	z-index: 10;
+	z-index: 1;
 	animation: animStar 450s linear infinite;
-	-webkit-transform: translateZ(-999px) scale(2);
-	//transform: translateZ(-999px) scale(2);
+	-webkit-transform: translateZ(-999px) scale(2); //transform: translateZ(-999px) scale(2);
 }
+
 @keyframes animStar {
 	from {
 		transform: translateY(0);

@@ -36,14 +36,16 @@ html {
     @include MQ(S) {
         margin: 0;
         padding: 0;
+        cursor: url('SVG/ufo.png'), auto;
         &::after {
             @include closeStars;
         }
-		&::before {
+        &::before {
             @include midStars;
         }
     }
 }
+
 body {
     display: flex;
     font-family: $primary-font;
@@ -69,13 +71,12 @@ body {
         background-position: top;
         background-repeat: repeat-x;
         background-size: auto;
-        cursor: url('SVG/ufo.png'), auto;	
         &::before {
             visibility: visible;
             grid-area: 1 / 3 / 1 / 3;
             content: url("SVG/Asset_27.svg");
             width: 100px;
-			padding: 0;
+            padding: 0;
             margin-left: -145px;
             animation: rot 6s infinite linear;
         }
@@ -141,6 +142,8 @@ h3 {
 }
 
 a {
+    position: relative;
+    z-index: 99;
     &:link {
         font-weight: bold;
         text-decoration: none;
@@ -152,10 +155,15 @@ a {
         color: $color-1;
     }
     &:hover,
-		&:focus,
-		&:active {
+    &:focus,
+    &:active {
         text-decoration: underline;
         color: $color-1;
+    }
+    &:hover {
+        position: relative;
+        z-index: 99;
+        cursor: pointer;
     }
 }
 
@@ -163,7 +171,6 @@ abbr[title] {
     border-bottom: none;
     text-decoration: dotted underline;
 }
-
 
 /* specific divs */
 
@@ -175,8 +182,7 @@ abbr[title] {
         grid-gap: 25px;
         grid-area: 2 / 1 / 6 / 5;
         grid-template-columns: 1fr calc(60%) calc(20%) 1fr;
-        grid-template-rows: auto auto auto auto auto auto;
-        // width: 100vw;
+        grid-template-rows: auto auto auto auto auto auto; // width: 100vw;
         background: $color-6;
         &::after {
             grid-area: 3 / 1 / 3 / 4;
@@ -191,11 +197,9 @@ abbr[title] {
             min-height: 350px;
             content: " ";
         }
-		&::before {
-
+        &::before {
             @include farStars;
-            
-		}
+        }
     }
 }
 
@@ -210,6 +214,7 @@ abbr[title] {
     flex-direction: column;
     p {
         display: inline-block;
+        z-index: 2;
     }
     h3 {
         align-items: flex-end;
@@ -219,9 +224,11 @@ abbr[title] {
 .summary {
     a {
         font-weight: bold;
-        text-decoration: none;
-        // border-bottom: $color-4 none;
+        text-decoration: none; // border-bottom: $color-4 none;
         &:hover {
+            position: relative;
+            z-index: 99;
+            cursor: pointer;
             border-bottom: $color-4 solid;
             visibility: visible;
             -webkit-transition: border;
@@ -364,13 +371,11 @@ header {
         }
         .benefits {
             grid-area: 5 / 2 / 5 / 2;
-
-		}
-		.requirements {
-			grid-area: 6 / 2 / 6 / 2;
-
-		}
-	}
+        }
+        .requirements {
+            grid-area: 6 / 2 / 6 / 2;
+        }
+    }
 }
 
 .sidebar {
@@ -414,8 +419,7 @@ header {
     .designer-name {
         font-weight: 700;
         color: $color-8;
-        font-size: 1.1em;
-        // text-transform: uppercase;
+        font-size: 1.1em; // text-transform: uppercase;
         letter-spacing: 1px;
         &::after {
             content: "\a";
@@ -521,6 +525,8 @@ nav {
     a {
         text-decoration: none;
         color: $color-8;
+        position: relative;
+        z-index: 2;
     }
 }
 
