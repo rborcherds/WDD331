@@ -6,44 +6,64 @@ xNavigation
 .cd-navigation {
     //Primary
     .cd-primary-nav {
-        color: $color-3;
-        font-size: 2rem;
+        background-color: black;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.21em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $color-5;
         a:visited {
-            color: $color-3;
+            font-weight: bold;
+            text-decoration: none;
+            color: $color-5;
         }
         a:active {
-            color: $color-4;
+            text-decoration: underline;
+            color: $color-5;
         }
         a:hover {
-            color: $color-1;
+            color: $color-5;
         }
     }
     //Secondary
     .cd-secondary-nav {
-        color: $color-2;
+        background-color: black;
+        font-weight: bold;
+        text-decoration: none;
+        color: #cecece;
         font-size: 2rem;
         a:visited {
-            color: $color-2;
+            font-weight: bold;
+            text-decoration: none;
+            color: #cecece;
         }
         a:active {
-            color: $color-4;
+            text-decoration: underline;
+            color: #cecece;
         }
         a:hover {
-            color: $color-1;
+            color: #cecece;
         }
     }
     //Other Links
     font-size: 2rem;
     a {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-1
     }
     a:visited {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-1;
     }
     a:active {
-        color: $color-4;
+        text-decoration: underline;
+        color: $color-1;
     }
     a:hover {
-        color: $color-6;
+        text-decoration: underline;
+        color: $color-1;
     }
 }
