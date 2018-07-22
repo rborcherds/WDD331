@@ -3,33 +3,9 @@
 @import 'partials/prefix-mixins';
 @import 'partials/layout';
 @import 'partials/stars';
-//@import 'partials/twinklingstars';
+@import 'partials/variables';
 @import 'partials/animation';
 // color palette - these colors will be the color swatches of the Colors section
-$color-1: #30CFD0;
-$color-2: #276dcc;
-$color-3: #330867;
-$color-4: #be50a9;
-$color-5: #ffffff;
-$color-6: #000;
-$color-7: linear-gradient(to right,
-#30CFD0 0%,
-#276dcc 45%,
-#330867 85%);
-$color-8: #cecece;
-$color-10: #2b3a42;
-$color-11: #3f5765;
-$color-12: #bdd4de;
-$color-13: #efefef;
-$color-14: #ff530d;
-// additional colors
-$success: #6fce72; // green
-$alert: #ce0000; // red
-// fonts
-$primary-font: 'Poppins',
-sans-serif;
-$secondary-font: 'Poppins',
-sans-serif;
 html {
     margin: 0;
     padding: 0;
