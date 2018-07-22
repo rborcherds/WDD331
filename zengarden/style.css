@@ -108,19 +108,17 @@ h3 {
   font-size: 1.21em;
   text-transform: uppercase;
   background: linear-gradient(to right, #30CFD0 0%, #276dcc 45%, #330867 85%);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
   margin-top: 20px;
   margin-bottom: 5px;
   color: #330867;
-  width: intrinsic;
   /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;
   /* Firefox/Gecko */
-  width: -webkit-max-content;
+  width: -moz-max-content;
   /* Chrome */
+  width: -webkit-max-content;
   align-self: flex-start; }
   @media only screen and (min-width: 768px) {
     h3 {
@@ -259,7 +257,6 @@ header {
     margin-bottom: 0;
     line-height: 1em;
     background: linear-gradient(to right, #30CFD0 0%, #276dcc 45%, #330867 85%);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
@@ -279,13 +276,11 @@ header {
         text-align: right;
         text-transform: uppercase;
         background: linear-gradient(to right, #30CFD0 0%, #276dcc 45%, #330867 85%);
-        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: 1px;
         margin-top: 20px;
-        margin-bottom: 5px;
-        color: linear-gradient(to right, #30CFD0 0%, #276dcc 45%, #330867 85%); } }
+        margin-bottom: 5px; } }
 
 .supporting footer {
   display: flex;
