@@ -6,6 +6,7 @@ xNavigation
 .cd-navigation {
     //Primary
     .cd-primary-nav {
+        a {
         background-color: black;
         font-weight: bold;
         text-decoration: none;
@@ -13,6 +14,7 @@ xNavigation
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $color-5;
+        }
         a:visited {
             font-weight: bold;
             text-decoration: none;
@@ -28,11 +30,13 @@ xNavigation
     }
     //Secondary
     .cd-secondary-nav {
+        a {
         background-color: black;
         font-weight: bold;
         text-decoration: none;
         color: #cecece;
         font-size: 2rem;
+        }
         a:visited {
             font-weight: bold;
             text-decoration: none;
@@ -65,5 +69,9 @@ xNavigation
     a:hover {
         text-decoration: underline;
         color: $color-1;
+    }
+    //Navigation box styling
+    .cd-box {
+        line-height: 3rem;
     }
 }
