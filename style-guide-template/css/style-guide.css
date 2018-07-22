@@ -166,32 +166,54 @@ xNavigation
 */
 .cd-navigation {
   font-size: 2rem; }
-  .cd-navigation .cd-primary-nav {
-    color: #330867;
+  .cd-navigation .cd-primary-nav a {
+    background-color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.21em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff; }
+  .cd-navigation .cd-primary-nav a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff; }
+  .cd-navigation .cd-primary-nav a:active {
+    text-decoration: underline;
+    color: #ffffff; }
+  .cd-navigation .cd-primary-nav a:hover {
+    color: #ffffff; }
+  .cd-navigation .cd-secondary-nav a {
+    background-color: black;
+    font-weight: bold;
+    text-decoration: none;
+    color: #cecece;
     font-size: 2rem; }
-    .cd-navigation .cd-primary-nav a:visited {
-      color: #330867; }
-    .cd-navigation .cd-primary-nav a:active {
-      color: #be50a9; }
-    .cd-navigation .cd-primary-nav a:hover {
-      color: #30CFD0; }
-  .cd-navigation .cd-secondary-nav {
-    color: #276dcc;
-    font-size: 2rem; }
-    .cd-navigation .cd-secondary-nav a:visited {
-      color: #276dcc; }
-    .cd-navigation .cd-secondary-nav a:active {
-      color: #be50a9; }
-    .cd-navigation .cd-secondary-nav a:hover {
-      color: #30CFD0; }
+  .cd-navigation .cd-secondary-nav a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #cecece; }
+  .cd-navigation .cd-secondary-nav a:active {
+    text-decoration: underline;
+    color: #cecece; }
+  .cd-navigation .cd-secondary-nav a:hover {
+    color: #cecece; }
   .cd-navigation a {
+    font-weight: bold;
+    text-decoration: none;
     color: #30CFD0; }
   .cd-navigation a:visited {
+    font-weight: bold;
+    text-decoration: none;
     color: #30CFD0; }
   .cd-navigation a:active {
-    color: #be50a9; }
+    text-decoration: underline;
+    color: #30CFD0; }
   .cd-navigation a:hover {
-    color: #000; }
+    text-decoration: underline;
+    color: #30CFD0; }
+  .cd-navigation .cd-box {
+    line-height: 3rem; }
 
 /* -------------------------------- 
 
